@@ -19,6 +19,7 @@ Keep these themes visible across key sections, not buried in fine print.
 ## Technical constraints
 
 - Must stay deployable on free OVH shared hosting.
+- No npm-based build requirement for deployment.
 - No backend runtime requirement.
 - No SSR requirement.
 - Output must remain static files.

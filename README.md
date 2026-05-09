@@ -26,16 +26,13 @@ Future-compatible reserved areas:
 
 ## Tech
 
-- Vite static frontend build
+- Pure static HTML/CSS/JS (no npm build stack required)
 - Lightweight vanilla JS
 - Custom CSS design system (dark-first, responsive, accessibility-minded)
-- Shared-hosting compatible static output (`dist/`)
+- Directly deployable to OVH shared hosting via FTP/file upload
 
-## Local development
+## Deployment
 
-```bash
-npm install
-npm run dev
-npm run build
-npm run preview
-```
+Upload the repository files as-is to your hosting root.
+
+No Node.js, npm, SSR, database, or backend service is required.
