@@ -37,14 +37,14 @@
     <header class="site-header">
       <div class="container nav-wrapper">
         <a href="/" class="brand" aria-label="MyAstroBoard home">
-          <span class="brand-dot"></span>
+          <img src="static/favicon/favicon.svg" alt="" aria-hidden="true" width="24" height="24" />
           <span>MyAstroBoard</span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/web-myastroboard/features/">Features</a>
-          <a href="/web-myastroboard/pricing/">Pricing</a>
-          <a href="/web-myastroboard/docs/">Docs</a>
+          <a href="features/">Features</a>
+          <a href="pricing/">Pricing</a>
+          <a href="docs/">Docs</a>
           <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
         </nav>
       </div>
@@ -64,7 +64,7 @@
             <div class="cta-row">
               <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ GitHub Repository</a>
               <a class="btn btn-secondary" href="#quickstart">Quick Start</a>
-              <a class="btn btn-secondary" href="/web-myastroboard/features/">All Features</a>
+              <a class="btn btn-secondary" href="features/">All Features</a>
             </div>
             <div class="trust-chips" role="list" aria-label="Core product principles">
               <span role="listitem">AGPL-3.0 Free Software</span>
@@ -260,7 +260,7 @@
             <li>AGPL-3.0 license: source code always available, forks must remain open</li>
           </ul>
           <div class="cta-row" style="margin-top:1.5rem">
-            <a class="btn btn-secondary" href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a class="btn btn-secondary" href="privacy/">Privacy Policy</a>
             <a class="btn btn-ghost" href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License ↗</a>
           </div>
         </div>
@@ -277,24 +277,28 @@
           <div class="step-item">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h3>Clone the repository</h3>
-              <div class="code-block"><span class="comment"># Clone from GitHub</span>
-<span class="cmd">git clone https://github.com/WorldOfGZ/myastroboard.git</span>
-<span class="cmd">cd myastroboard</span></div>
+              <h3>Create the local repository</h3>
+              <div class="code-block"><span class="comment"># Example</span>
+<span class="cmd">mkdir /opt/myastroboard</span>
+<span class="cmd">cd /opt/myastroboard</span></div>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
             <div class="step-content">
-              <h3>Start with Docker Compose</h3>
-              <div class="code-block"><span class="comment"># Start in production mode</span>
-<span class="cmd">docker compose up -d</span>
-<span class="comment"># Or pull the pre-built image from Docker Hub</span>
-<span class="cmd">docker compose pull &amp;&amp; docker compose up -d</span></div>
+              <h3>Download the docker-compose file</h3>
+              <div class="code-block"><span class="cmd">curl -o docker-compose.yml https://raw.githubusercontent.com/WorldOfGZ/myastroboard/main/docker-compose.yml</span></div>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Start the application</h3>
+              <div class="code-block"><span class="cmd">docker compose pull &amp;&amp; docker compose up -d</span></div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
             <div class="step-content">
               <h3>Open your browser and configure</h3>
               <div class="code-block"><span class="comment"># Open http://localhost:5000 in your browser</span>
@@ -321,7 +325,7 @@
           <p>MyAstroBoard is developed entirely in public on GitHub with a clear contribution workflow. The codebase is Python 3.11 + Flask on the backend, and vanilla HTML/CSS/JavaScript on the frontend — no heavy framework dependencies.</p>
           <p style="margin-top:0.8rem">Licensed under <strong>AGPL-3.0</strong>: all forks and derivatives must remain open source. Source code for all deployed versions is always available in the repository.</p>
           <div class="tech-list" style="margin-top:1.2rem">
-            <span class="tech-badge">Python 3.11</span>
+            <span class="tech-badge">Python 3.13</span>
             <span class="tech-badge">Flask</span>
             <span class="tech-badge">Astropy</span>
             <span class="tech-badge">Astroplan</span>
@@ -342,7 +346,7 @@
             <span>Pre-built Image Available</span>
           </div>
           <div>
-            <strong>EN / FR</strong>
+            <strong>EN / FR / ...</strong>
             <span>Internationalization</span>
           </div>
           <div>
@@ -377,8 +381,8 @@
         <p>MyAstroBoard is free forever. No trial. No premium tier. Everything unlocked because it's open source.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ Star on GitHub</a>
-          <a class="btn btn-secondary" href="/web-myastroboard/features/">Explore All Features</a>
-          <a class="btn btn-ghost" href="/web-myastroboard/docs/">Documentation</a>
+          <a class="btn btn-secondary" href="features/">Explore All Features</a>
+          <a class="btn btn-ghost" href="docs/">Documentation</a>
         </div>
       </section>
 
@@ -394,9 +398,9 @@
           </div>
           <div class="footer-col">
             <h4>Navigation</h4>
-            <a href="/web-myastroboard/features/">Features</a>
-            <a href="/web-myastroboard/pricing/">Pricing</a>
-            <a href="/web-myastroboard/docs/">Documentation</a>
+            <a href="features/">Features</a>
+            <a href="pricing/">Pricing</a>
+            <a href="docs/">Documentation</a>
           </div>
           <div class="footer-col">
             <h4>Project</h4>
@@ -407,9 +411,9 @@
           </div>
           <div class="footer-col">
             <h4>Legal & Privacy</h4>
-            <a href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a href="privacy/">Privacy Policy</a>
             <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License ↗</a>
-            <p class="footer-legal" style="margin-top:0.5rem">This website does not use tracking cookies or analytics. <a href="/web-myastroboard/privacy/">Learn more</a>.</p>
+            <p class="footer-legal" style="margin-top:0.5rem">This website does not use tracking cookies or analytics. <a href="privacy/">Learn more</a>.</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -423,7 +427,7 @@
     <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
       <div class="container cookie-inner">
         <p class="cookie-text">
-          This website does not use tracking cookies or analytics scripts. We use <strong>localStorage</strong> to save your cookie preference on your device only. See our <a href="/web-myastroboard/privacy/">Privacy Policy</a> for details.
+          This website does not use tracking cookies or analytics scripts. We use <strong>localStorage</strong> to save your cookie preference on your device only. See our <a href="privacy/">Privacy Policy</a> for details.
         </p>
         <div class="cookie-actions">
           <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
