@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myAstroBoard — Self-hosted astronomy dashboard</title>
+    <meta
+      name="description"
+      content="myAstroBoard is an open-source, self-hosted, privacy-first astronomy dashboard. No account, no tracking, no cloud lock-in."
+    />
+    <meta
+      name="keywords"
+      content="myAstroBoard, astronomy dashboard, self-hosted, open source, privacy-first, observatory"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="myAstroBoard — Modern self-hosted astronomy dashboard" />
+    <meta
+      property="og:description"
+      content="Your observatory, your data. Open-source, local-first and fully user-controlled."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://worldofgz.github.io/myAstroBoard" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="/" class="brand" aria-label="myAstroBoard home">
+          <span class="brand-dot"></span>
+          <span>myAstroBoard</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <a href="/features/">Features</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/docs/">Documentation</a>
+          <a href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section container">
+        <p class="eyebrow">Open-source · Self-hosted · Privacy-first</p>
+        <h1>The modern self-hosted astronomy dashboard enthusiasts have been waiting for.</h1>
+        <p class="hero-copy">
+          myAstroBoard brings observatory visibility, ISS tracking, weather, sky events, and modular widgets into one
+          elegant control center you fully own.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">
+            View on GitHub
+          </a>
+          <a class="btn btn-secondary" href="/features/">Explore Features</a>
+          <a class="btn btn-secondary" href="/docs/">Documentation</a>
+        </div>
+        <div class="trust-chips" role="list" aria-label="Core product principles">
+          <span role="listitem">Open Source</span>
+          <span role="listitem">Self-Hosted</span>
+          <span role="listitem">Privacy First</span>
+          <span role="listitem">Local Data</span>
+        </div>
+        <article class="dashboard-preview" aria-label="myAstroBoard dashboard preview">
+          <header>
+            <strong>Observatory Night Dashboard</strong>
+            <span>Live Local Instance</span>
+          </header>
+          <div class="dashboard-grid">
+            <section><h2>Sky Conditions</h2><p>Seeing 0.8 · Transparency High · Moon 12%</p></section>
+            <section><h2>ISS Tracker</h2><p>Next pass in 00:42:13 · Max alt 78°</p></section>
+            <section><h2>Meteor Activity</h2><p>Eta Aquariids peak tonight · Dark window optimal</p></section>
+            <section><h2>Equipment</h2><p>Mount ready · Camera cooled · Dome synchronized</p></section>
+          </div>
+        </article>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Feature Overview</p>
+          <h2>Built for real observatory workflows, not generic dashboards.</h2>
+        </div>
+        <div class="feature-grid">
+          <article><h3>Astronomy Dashboard</h3><p>Mission control for your nightly sessions and observatory stack.</p></article>
+          <article><h3>ISS Tracking</h3><p>Live pass windows with practical visibility context for your location.</p></article>
+          <article><h3>Space Events</h3><p>Curated events, conjunctions, and high-value viewing opportunities.</p></article>
+          <article><h3>Meteor Showers</h3><p>Peak alerts and observing readiness in one glance.</p></article>
+          <article><h3>Astrophotography Tools</h3><p>Session-aware widgets for imaging, capture checks, and run status.</p></article>
+          <article><h3>Weather Integration</h3><p>Cloud cover, humidity, wind, and observatory impact indicators.</p></article>
+          <article><h3>Observatory Monitoring</h3><p>Track mount, dome, and equipment states from any device you control.</p></article>
+          <article><h3>Responsive Widgets</h3><p>Arrange modular blocks to match your own observation habits.</p></article>
+        </div>
+      </section>
+
+      <section class="section container privacy-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy & Ownership</p>
+          <h2>Your observatory. Your infrastructure. Your data.</h2>
+        </div>
+        <p>
+          myAstroBoard runs on your own server, NAS, mini-PC, or home lab. No account required, no forced cloud, no
+          telemetry by default, no data selling, and no vendor lock-in. You decide what is exposed and what stays private.
+        </p>
+        <ul>
+          <li>Data stays local by default</li>
+          <li>No user tracking cookies on this website</li>
+          <li>No third-party analytics scripts</li>
+          <li>No subscription gatekeeping core features</li>
+        </ul>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Showcase</p>
+          <h2>A premium interface designed to make every observation session clearer.</h2>
+        </div>
+        <div class="showcase-grid">
+          <article><h3>Desktop Focus</h3><p>Dense, glanceable telemetry with strong contrast for night sessions.</p></article>
+          <article><h3>Mobile Companion</h3><p>Fast responsive view for in-field checks and telescope-side adjustments.</p></article>
+          <article><h3>Smooth interactions</h3><p>Subtle transitions and low-overhead animations with minimal JS payload.</p></article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Built For</p>
+          <h2>Astrophotographers, stargazers, observatory owners, and open-source builders.</h2>
+        </div>
+        <div class="tag-grid">
+          <span>Astrophotographers</span><span>Stargazers</span><span>Astronomy Enthusiasts</span>
+          <span>Observatory Owners</span><span>Space Communities</span><span>DIY Observatory Builders</span>
+        </div>
+      </section>
+
+      <section class="section container open-source-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Open Ecosystem</p>
+          <h2>Community-driven. Transparent. Contribution-friendly.</h2>
+        </div>
+        <p>
+          myAstroBoard is developed in public with a GitHub-first workflow. Documentation is planned as Markdown-first and
+          version-friendly to keep contributions practical for everyone.
+        </p>
+        <div class="stats-grid" aria-label="GitHub stats placeholders">
+          <div><strong>★ —</strong><span>GitHub Stars</span></div>
+          <div><strong>⎇ —</strong><span>Forks</span></div>
+          <div><strong>PR —</strong><span>Open Collaboration</span></div>
+        </div>
+      </section>
+
+      <section class="section container final-cta">
+        <h2>Everything unlocked. Because it’s yours.</h2>
+        <p>Star the project, follow development, and start shaping your own observatory platform.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">Explore Repository</a>
+          <a class="btn btn-secondary" href="/pricing/">See Pricing Philosophy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>myAstroBoard</strong>
+          <p>Open-source self-hosted astronomy dashboard.</p>
+        </div>
+        <div>
+          <a href="/features/">Features</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/docs/">Documentation</a>
+        </div>
+        <div>
+          <p>GDPR/RGPD-ready approach: no tracking cookies, no telemetry by default.</p>
+          <p id="copyright"></p>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/site.js" defer></script>
+  </body>
+</html>
