@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Canonical redirect to https://myastroboard.org
+# Redirects:
+# - http://myastroboard.org
+# - http://www.myastroboard.org
+# - http://myastroboard.com
+# - http://www.myastroboard.com
+# - https://myastroboard.com
+# - https://www.myastroboard.com
+# - https://www.myastroboard.org
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^myastroboard\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.myastroboard\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.myastroboard\.org$ [NC]
+RewriteRule ^ https://myastroboard.org%{REQUEST_URI} [R=301,L,NE]
