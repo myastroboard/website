@@ -1,55 +1,199 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentation — myAstroBoard</title>
-    <meta
-      name="description"
-      content="Documentation portal placeholder for myAstroBoard with future Markdown-first and GitHub-driven docs architecture."
-    />
+    <title>Documentation — MyAstroBoard</title>
+    <meta name="description" content="MyAstroBoard documentation: installation guide, quick start, Docker setup, API reference, SkyTonight architecture, and contribution guides." />
+    <link rel="canonical" href="https://worldofgz.github.io/web-myastroboard/docs/" />
     <link rel="icon" type="image/svg+xml" href="../static/favicon/favicon.svg" />
     <link rel="stylesheet" href="../static/css/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-bg" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="container nav-wrapper">
-        <a href="/" class="brand"><span class="brand-dot"></span><span>myAstroBoard</span></a>
+        <a href="/web-myastroboard/" class="brand"><span class="brand-dot"></span><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/features/">Features</a>
-          <a href="/pricing/">Pricing</a>
-          <a href="/docs/" aria-current="page">Documentation</a>
-          <a href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/web-myastroboard/features/">Features</a>
+          <a href="/web-myastroboard/pricing/">Pricing</a>
+          <a href="/web-myastroboard/docs/" aria-current="page">Docs</a>
+          <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content" class="container section">
       <p class="eyebrow">Documentation</p>
-      <h1>Documentation platform is next.</h1>
-      <p class="hero-copy">
-        This route is intentionally reserved for a future contributor-friendly docs portal powered by Markdown and
-        GitHub-driven workflows (Astro Starlight compatible).
-      </p>
-      <div class="showcase-grid">
-        <article><h2>Planned /docs</h2><p>Versioned guides, setup docs, and API references.</p></article>
-        <article><h2>Planned /blog</h2><p>Release notes, dev logs, and observatory build stories.</p></article>
-        <article><h2>Planned /community</h2><p>Contribution pathways, discussions, and ecosystem updates.</p></article>
+      <h1>Everything you need to install, configure and contribute.</h1>
+      <p class="hero-copy">All documentation lives in the GitHub repository as versioned Markdown files. Click any card below to open the relevant guide directly on GitHub.</p>
+
+      <!-- Getting Started -->
+      <div class="feature-cat-section" style="margin-top:3rem">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🚀</span>
+          <div>
+            <h2>Getting Started</h2>
+            <p>Everything you need to get MyAstroBoard up and running.</p>
+          </div>
+        </div>
+        <div class="doc-grid">
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/1.INSTALLATION.md" target="_blank" rel="noreferrer noopener" aria-label="Installation guide on GitHub">
+            <span class="doc-card-icon">📦</span>
+            <h3>Installation Guide</h3>
+            <p>Step-by-step Docker installation on Linux, including directory structure, volume setup, and first-run checklist.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/2.QUICKSTART.md" target="_blank" rel="noreferrer noopener" aria-label="Quick start guide on GitHub">
+            <span class="doc-card-icon">⚡</span>
+            <h3>Quick Start</h3>
+            <p>Minimal steps to get your first SkyTonight calculation running. Configure your location and observe results within minutes.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/3.UPDATE.md" target="_blank" rel="noreferrer noopener" aria-label="Update guide on GitHub">
+            <span class="doc-card-icon">🔄</span>
+            <h3>Update Guide</h3>
+            <p>How to pull the latest Docker image and apply updates without losing your configuration or observation data.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/6.REVERSE_PROXY.md" target="_blank" rel="noreferrer noopener" aria-label="Reverse proxy guide on GitHub">
+            <span class="doc-card-icon">🔒</span>
+            <h3>Reverse Proxy &amp; HTTPS</h3>
+            <p>Configure Nginx or Traefik as a reverse proxy with HTTPS termination. Recommended for any internet-exposed instance.</p>
+          </a>
+        </div>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">Follow on GitHub</a>
-        <a class="btn btn-secondary" href="/">Back to Landing Page</a>
+
+      <!-- Feature Docs -->
+      <div class="feature-cat-section">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🔭</span>
+          <div>
+            <h2>Feature Documentation</h2>
+            <p>Deep dives into core features and their architecture.</p>
+          </div>
+        </div>
+        <div class="doc-grid">
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/SKYTONIGHT.md" target="_blank" rel="noreferrer noopener" aria-label="SkyTonight architecture documentation on GitHub">
+            <span class="doc-card-icon">🌌</span>
+            <h3>SkyTonight Architecture</h3>
+            <p>Full documentation of the SkyTonight engine: catalog pipeline, AstroScore formula, scheduler behavior, and data model.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/PLAN_MY_NIGHT.md" target="_blank" rel="noreferrer noopener" aria-label="Plan My Night documentation on GitHub">
+            <span class="doc-card-icon">📅</span>
+            <h3>Plan My Night</h3>
+            <p>How to build, manage, and export your observation timeline. API endpoints, data structure, and usage guide.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/API_ENDPOINTS.md" target="_blank" rel="noreferrer noopener" aria-label="API endpoints reference on GitHub">
+            <span class="doc-card-icon">📡</span>
+            <h3>API Endpoints Reference</h3>
+            <p>Complete inventory of all REST API endpoints, authentication requirements, request/response formats, and examples.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/CACHE_SYSTEM.md" target="_blank" rel="noreferrer noopener" aria-label="Cache system documentation on GitHub">
+            <span class="doc-card-icon">⚡</span>
+            <h3>Cache System</h3>
+            <p>Architecture of the selective-refresh background cache, per-job TTLs, execution metrics, and how to monitor cache health.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/VISUAL_TOUR.md" target="_blank" rel="noreferrer noopener" aria-label="Visual tour on GitHub">
+            <span class="doc-card-icon">🖼</span>
+            <h3>Visual Tour</h3>
+            <p>Annotated screenshots of every tab and feature. The best starting point to understand what MyAstroBoard looks like in practice.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/7.TRANSLATIONS.md" target="_blank" rel="noreferrer noopener" aria-label="Translation guide on GitHub">
+            <span class="doc-card-icon">🌐</span>
+            <h3>Translation Guide</h3>
+            <p>How to add a new language or improve existing translations. All you need is a JSON file following the established key structure.</p>
+          </a>
+        </div>
       </div>
+
+      <!-- Contributing -->
+      <div class="feature-cat-section">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🤝</span>
+          <div>
+            <h2>Contributing</h2>
+            <p>Join the community and help shape MyAstroBoard.</p>
+          </div>
+        </div>
+        <div class="doc-grid">
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer noopener" aria-label="Contributing guidelines on GitHub">
+            <span class="doc-card-icon">🛠</span>
+            <h3>Contribution Guidelines</h3>
+            <p>Coding standards, branch workflow, commit conventions, and how to submit a pull request.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/4.RELEASE.md" target="_blank" rel="noreferrer noopener" aria-label="Release process documentation on GitHub">
+            <span class="doc-card-icon">🏷</span>
+            <h3>Release Process</h3>
+            <p>How versioning works, how releases are tagged and published, and how Docker images are built via GitHub Actions CI/CD.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/blob/main/ROADMAP.md" target="_blank" rel="noreferrer noopener" aria-label="Roadmap on GitHub">
+            <span class="doc-card-icon">🗺</span>
+            <h3>Roadmap</h3>
+            <p>Planned features and improvements. Open to community input via GitHub Issues and Discussions.</p>
+          </a>
+          <a class="doc-card" href="https://github.com/WorldOfGZ/myastroboard/issues" target="_blank" rel="noreferrer noopener" aria-label="GitHub Issues">
+            <span class="doc-card-icon">🐛</span>
+            <h3>GitHub Issues</h3>
+            <p>Report bugs, request features, and track known issues. The primary support and feedback channel for the project.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="highlight-panel" style="text-align:center;margin-top:1rem">
+        <p class="eyebrow">Start building</p>
+        <h2>Ready to deploy your own instance?</h2>
+        <p style="margin-top:0.6rem">The Installation Guide has everything you need to go from zero to a running SkyTonight calculation in under 10 minutes.</p>
+        <div class="cta-row" style="justify-content:center;margin-top:1.5rem">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/1.INSTALLATION.md" target="_blank" rel="noreferrer noopener">Installation Guide ↗</a>
+          <a class="btn btn-secondary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub Repository ↗</a>
+        </div>
+      </div>
+
     </main>
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><strong>myAstroBoard</strong><p>Open-source self-hosted astronomy dashboard.</p></div>
-        <div><a href="/">Home</a><a href="/features/">Features</a><a href="/pricing/">Pricing</a></div>
-        <div><p>Future docs will stay open, versioned, and community-editable.</p><p id="copyright"></p></div>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <strong>MyAstroBoard</strong>
+            <p>Self-hosted astronomy dashboard. Documentation hosted on GitHub.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="/web-myastroboard/">Home</a>
+            <a href="/web-myastroboard/features/">Features</a>
+            <a href="/web-myastroboard/pricing/">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Project</h4>
+            <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/issues" target="_blank" rel="noreferrer noopener">Issues ↗</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 ↗</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="js-copyright"></span>
+          <span>Documentation available on <a href="https://github.com/WorldOfGZ/myastroboard/tree/main/docs" target="_blank" rel="noreferrer">GitHub</a></span>
+        </div>
       </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
+      <div class="container cookie-inner">
+        <p class="cookie-text">This website does not use tracking cookies. We use localStorage to save your preference only. <a href="/web-myastroboard/privacy/">Privacy Policy</a>.</p>
+        <div class="cookie-actions">
+          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Got it</button>
+        </div>
+      </div>
+    </div>
+
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>

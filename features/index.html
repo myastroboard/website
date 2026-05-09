@@ -1,50 +1,330 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Features — myAstroBoard</title>
-    <meta name="description" content="Detailed capabilities of myAstroBoard, the modern self-hosted astronomy dashboard." />
+    <title>Features — MyAstroBoard</title>
+    <meta name="description" content="Full feature list for MyAstroBoard: SkyTonight automated planning, AstroScore, Plan My Night, Astrodex, astrophotography weather, ISS tracking, spaceflight events, equipment profiles and more." />
+    <link rel="canonical" href="https://worldofgz.github.io/web-myastroboard/features/" />
     <link rel="icon" type="image/svg+xml" href="../static/favicon/favicon.svg" />
     <link rel="stylesheet" href="../static/css/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-bg" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="container nav-wrapper">
-        <a href="/" class="brand"><span class="brand-dot"></span><span>myAstroBoard</span></a>
+        <a href="/web-myastroboard/" class="brand"><span class="brand-dot"></span><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/features/" aria-current="page">Features</a>
-          <a href="/pricing/">Pricing</a>
-          <a href="/docs/">Documentation</a>
-          <a href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/web-myastroboard/features/" aria-current="page">Features</a>
+          <a href="/web-myastroboard/pricing/">Pricing</a>
+          <a href="/web-myastroboard/docs/">Docs</a>
+          <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content" class="container section">
-      <p class="eyebrow">Features</p>
-      <h1>Everything you need for a serious astronomy dashboard platform.</h1>
-      <p class="hero-copy">Designed for local-first workflows, reliable observatory operation, and modern multi-device usage.</p>
-      <div class="feature-grid feature-grid-lg">
-        <article><h3>Unified Dashboard</h3><p>A central command surface for observation planning and live monitoring.</p></article>
-        <article><h3>Real-time Data Widgets</h3><p>Track sky conditions, events, and equipment at a glance.</p></article>
-        <article><h3>ISS and Orbital Awareness</h3><p>Monitor pass windows with practical context for session planning.</p></article>
-        <article><h3>Meteor Shower Forecasting</h3><p>Follow peak timings, darkness windows, and visibility indicators.</p></article>
-        <article><h3>Weather Intelligence</h3><p>Pull local weather and atmosphere metrics relevant to observation quality.</p></article>
-        <article><h3>Observatory Monitoring</h3><p>Surface mount, dome, and environment status from your own infrastructure.</p></article>
-        <article><h3>Modular Architecture</h3><p>Extend features over time without locking users into vendor-defined constraints.</p></article>
-        <article><h3>Multi-device UI</h3><p>Responsive layout tuned for desktop planning and mobile in-field checks.</p></article>
+      <p class="eyebrow">Complete Feature Reference</p>
+      <h1>Everything you need for serious astrophotography sessions.</h1>
+      <p class="hero-copy">MyAstroBoard combines an autonomous sky-planning engine, personal observation tools, weather intelligence, and space-tracking data into one self-hosted application.</p>
+
+      <!-- ========== SKYTONIGHT ========== -->
+      <div class="feature-cat-section" style="margin-top:3rem" id="skytonight">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🔭</span>
+          <div>
+            <h2>SkyTonight — Automated Observation Planning</h2>
+            <p>Your personal sky scheduler, powered by Astropy and Astroplan.</p>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">⚙️</span>
+            <h3>Fully Automated Engine</h3>
+            <p>SkyTonight runs automatically at 1 hour after astronomical dawn and 1 hour before astronomical dusk, every day. No manual trigger needed. A smart clock fallback every 6 hours ensures reliability even with untrusted system clocks.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📚</span>
+            <h3>International Catalogs</h3>
+            <p>Targets sourced from <strong>OpenNGC</strong>, <strong>OpenIC</strong> (via PyOngc), <strong>Messier</strong>, <strong>Caldwell</strong>, comets from Minor Planet Center (JPL fallback), and all solar-system bodies via Skyfield de421.bsp ephemeris.</p>
+          </article>
+          <article>
+            <span class="feature-icon">⭐</span>
+            <h3>AstroScore [0–1]</h3>
+            <p>Each target is ranked with a dimensionless quality score: Visibility (40%), Sky quality (25%), Object brightness (25%), Viewing comfort (10%). Bonuses for planetary opposition (+0.20) and Messier objects (+0.05).</p>
+          </article>
+          <article>
+            <span class="feature-icon">🗺</span>
+            <h3>Interactive Sky Map</h3>
+            <p>Polar azimuth/altitude projection with full target trajectory arcs for the night. Click any target to inspect its details. Color-coded by object type (DSO, planet, comet).</p>
+          </article>
+          <article>
+            <span class="feature-icon">📈</span>
+            <h3>Altitude-vs-Time Charts</h3>
+            <p>Per-target interactive charts powered by Chart.js. See exact observability windows, astronomical night bands, and your personal altitude/airmass constraints at a glance.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🎯</span>
+            <h3>Configurable Constraints</h3>
+            <p>Define your limits: minimum/maximum altitude, airmass threshold, object angular size, moon separation angle, and observability fraction. SkyTonight filters and ranks accordingly.</p>
+          </article>
+          <article>
+            <span class="feature-icon">☄️</span>
+            <h3>Real-Time Comets</h3>
+            <p>Fresh comet orbital data fetched from MPC. Comets are processed through the same AstroScore pipeline, giving you apples-to-apples comparison with DSOs.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🪐</span>
+            <h3>Solar System Bodies</h3>
+            <p>All planets, the Moon, and other solar-system bodies computed with Skyfield high-precision ephemeris. Visibility windows, elongation, and opposition status all included.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📋</span>
+            <h3>Target Reports</h3>
+            <p>Formatted nightly reports per target with key observational data. Export or browse in the dedicated Reports sub-tab for session preparation.</p>
+          </article>
+        </div>
       </div>
+
+      <!-- ========== PLANNING TOOLS ========== -->
+      <div class="feature-cat-section" id="planning">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">📅</span>
+          <div>
+            <h2>Observation Planning Tools</h2>
+            <p>From target selection to session export — plan your entire night in the app.</p>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">🗒</span>
+            <h3>Plan My Night</h3>
+            <p>Build a personal observation timeline from SkyTonight results. Add targets, set order, check FOV compatibility, and review altitude windows for your entire session before heading outside.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📤</span>
+            <h3>CSV &amp; PDF Export</h3>
+            <p>Export your Plan My Night timeline to CSV for spreadsheet use or PDF for field print. Take your plan to the eyepiece without screen dependency.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🗃️</span>
+            <h3>Astrodex — Personal Catalog</h3>
+            <p>Your private astrophotography catalog. Track which objects you have imaged, attach your own photos, add session notes, and cross-reference with SkyTonight results for progress tracking.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🔩</span>
+            <h3>Equipment Profiles</h3>
+            <p>Create and manage telescope, camera, and mount profiles. The field-of-view calculator uses your gear specs to highlight which SkyTonight targets best match your imaging setup.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌅</span>
+            <h3>Moon Planner</h3>
+            <p>Multi-day moon phase planner showing new moon windows, best astrophotography periods (dark window), and optimal dates for scheduling deep-sky sessions weeks ahead.</p>
+          </article>
+          <article>
+            <span class="feature-icon">⛰</span>
+            <h3>Horizon Graph</h3>
+            <p>Upload your local horizon profile to filter SkyTonight targets against obstructions from mountains, trees, or buildings. Only viable targets are presented.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== SKY & WEATHER ========== -->
+      <div class="feature-cat-section" id="sky-intelligence">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🌤</span>
+          <div>
+            <h2>Sky Intelligence &amp; Weather</h2>
+            <p>Astronomy-specific weather analysis and sky condition monitoring.</p>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">☁️</span>
+            <h3>Astrophotography Weather</h3>
+            <p>Open-Meteo powered weather forecast with astrophotography-specific overlays: cloud cover, transparency, wind speed and direction, humidity, and dew risk alerts for your exact GPS coordinates.</p>
+          </article>
+          <article>
+            <span class="feature-icon">👁</span>
+            <h3>Seeing Forecast</h3>
+            <p>Atmospheric seeing predictions showing expected stellar resolution and turbulence levels throughout the night. Plan your most demanding high-resolution sessions on the best nights.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌙</span>
+            <h3>Moon Phase &amp; Dark Window</h3>
+            <p>Current moon phase, illumination percentage, rise/set times, and precise dark-window calculation (astronomical twilight to moonrise) so you know exactly how much dark time you have.</p>
+          </article>
+          <article>
+            <span class="feature-icon">☀️</span>
+            <h3>Sun Phases</h3>
+            <p>Civil, nautical, and astronomical twilight times for your location. Accurate sunrise/sunset and golden-hour data for solar imaging and outdoor planning.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌑</span>
+            <h3>Solar &amp; Lunar Eclipses</h3>
+            <p>Next upcoming solar and lunar eclipses with interactive altitude-vs-time charts for your specific location. Visual tour of eclipse phases and contact times.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌌</span>
+            <h3>Aurora Forecast</h3>
+            <p>Geomagnetic activity forecast and aurora visibility predictions for mid-to-high latitudes. Best viewing windows highlighted relative to your local night.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== SPACE TRACKING ========== -->
+      <div class="feature-cat-section" id="space-tracking">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">🚀</span>
+          <div>
+            <h2>Space Tracking</h2>
+            <p>Everything happening in space — from your backyard.</p>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">🛸</span>
+            <h3>ISS Live Position</h3>
+            <p>Real-time International Space Station ground track. Know exactly where the ISS is at any moment and when it will pass over your location.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🔭</span>
+            <h3>ISS Visible Passes</h3>
+            <p>Upcoming ISS visible passes for your configured location. Exact pass times, maximum elevation angles, approach/departure directions, and visibility duration.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🚀</span>
+            <h3>Rocket Launches</h3>
+            <p>Upcoming and past rocket launches with countdown timers, mission details, and video stream links. Powered by Launch Library 2 API.</p>
+          </article>
+          <article>
+            <span class="feature-icon">👨‍🚀</span>
+            <h3>Humans in Space</h3>
+            <p>Current ISS crew and all humans currently in orbit. Mission name, launch date, time in space, and crew roles — updated automatically.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🗓</span>
+            <h3>Space Events</h3>
+            <p>Upcoming spacewalks (EVA), dockings, undockings, and other spaceflight milestones from aggregated event feeds.</p>
+          </article>
+          <article>
+            <span class="feature-icon">⚡</span>
+            <h3>Astronomical Events</h3>
+            <p>Upcoming planetary events including oppositions, conjunctions, elongations, and other significant sky events for the coming weeks.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== SYSTEM ========== -->
+      <div class="feature-cat-section" id="system">
+        <div class="feature-cat-header">
+          <span class="feature-cat-icon">⚙️</span>
+          <div>
+            <h2>System &amp; Platform</h2>
+            <p>Enterprise-grade capabilities in a self-hosted, single-container package.</p>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">🐳</span>
+            <h3>Docker-First Deployment</h3>
+            <p>Single Docker Compose command deployment. Pre-built images on Docker Hub. Development, debug, and production compose files included. Persistent data via volume mount.</p>
+          </article>
+          <article>
+            <span class="feature-icon">👥</span>
+            <h3>Multi-User Authentication</h3>
+            <p>Admin, user, and read-only roles. Flask session-based auth with bcrypt-hashed passwords. Each user keeps independent preferences including language, theme, and startup tab.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌐</span>
+            <h3>Internationalization</h3>
+            <p>Full UI in English and French with community translation support. Browser language auto-detection. New languages can be added via a single JSON translation file.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📡</span>
+            <h3>REST API</h3>
+            <p>Complete documented REST API for all features. Authentication-protected endpoints. Ideal for scripting, home automation integration, or custom dashboards.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📱</span>
+            <h3>PWA — Works Offline</h3>
+            <p>Progressive Web App with service worker and manifest. Install on desktop or mobile for a native-like experience. Offline fallback page included.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🎨</span>
+            <h3>Themes &amp; Customization</h3>
+            <p>Light, dark, auto (system preference), and a dedicated red night-vision mode. Per-user density settings (comfortable / compact). Start tab configurable per user.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📊</span>
+            <h3>System Metrics</h3>
+            <p>Built-in metrics dashboard showing cache job status, last execution times, TTLs, scheduler state, and application health — all in the admin panel.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🔐</span>
+            <h3>Security by Design</h3>
+            <p>No Docker socket access required. Input validation on all API routes. Role-based access control. Secure session cookies. Regular GitHub Actions security scanning.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== CTA ========== -->
+      <div class="highlight-panel" style="text-align:center;margin-top:1rem">
+        <p class="eyebrow">All Features, Zero Cost</p>
+        <h2>Everything unlocked. Because it's yours.</h2>
+        <p style="margin-top:0.6rem">MyAstroBoard is free and open source under AGPL-3.0. Every feature listed here is available in the standard Docker image with no premium tier or paywall.</p>
+        <div class="cta-row" style="justify-content:center;margin-top:1.5rem">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ GitHub Repository</a>
+          <a class="btn btn-secondary" href="/web-myastroboard/pricing/">Pricing Philosophy</a>
+        </div>
+      </div>
+
     </main>
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><strong>myAstroBoard</strong><p>Open-source self-hosted astronomy dashboard.</p></div>
-        <div><a href="/">Home</a><a href="/pricing/">Pricing</a><a href="/docs/">Documentation</a></div>
-        <div><p>No cloud lock-in. No forced subscriptions.</p><p id="copyright"></p></div>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <strong>MyAstroBoard</strong>
+            <p>Self-hosted astronomy dashboard for astrophotographers and space enthusiasts.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="/web-myastroboard/">Home</a>
+            <a href="/web-myastroboard/pricing/">Pricing</a>
+            <a href="/web-myastroboard/docs/">Documentation</a>
+          </div>
+          <div class="footer-col">
+            <h4>Project</h4>
+            <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+            <a href="https://hub.docker.com/r/worldofgz/myastroboard" target="_blank" rel="noreferrer noopener">Docker Hub ↗</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 ↗</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="js-copyright"></span>
+          <span>Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
+        </div>
       </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
+      <div class="container cookie-inner">
+        <p class="cookie-text">This website does not use tracking cookies. We use localStorage to save your preference only. <a href="/web-myastroboard/privacy/">Privacy Policy</a>.</p>
+        <div class="cookie-actions">
+          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Got it</button>
+        </div>
+      </div>
+    </div>
+
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>

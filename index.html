@@ -1,184 +1,437 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myAstroBoard — Self-hosted astronomy dashboard</title>
-    <meta
-      name="description"
-      content="myAstroBoard is an open-source, self-hosted, privacy-first astronomy dashboard. No account, no tracking, no cloud lock-in."
-    />
-    <meta
-      name="keywords"
-      content="myAstroBoard, astronomy dashboard, self-hosted, open source, privacy-first, observatory"
-    />
+    <title>MyAstroBoard — Self-hosted astronomy dashboard for astrophotographers</title>
+    <meta name="description" content="MyAstroBoard is a self-hosted, open-source astronomy dashboard with automated SkyTonight observation planning, AstroScore ranking, astrophotography weather analysis, ISS tracking, and more. Docker-ready. Privacy-first." />
+    <meta name="keywords" content="MyAstroBoard, astronomy dashboard, astrophotography, SkyTonight, self-hosted, open source, observation planning, AstroScore, Docker, Astropy" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="myAstroBoard — Modern self-hosted astronomy dashboard" />
-    <meta
-      property="og:description"
-      content="Your observatory, your data. Open-source, local-first and fully user-controlled."
-    />
+    <meta property="og:title" content="MyAstroBoard — Autonomous astronomy dashboard for astrophotographers" />
+    <meta property="og:description" content="Automated SkyTonight observation planning, AstroScore target ranking, astrophotography weather, ISS tracking and more. Self-hosted. Docker-ready." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://worldofgz.github.io/myAstroBoard" />
+    <meta property="og:url" content="https://worldofgz.github.io/web-myastroboard/" />
+    <link rel="canonical" href="https://worldofgz.github.io/web-myastroboard/" />
     <link rel="icon" type="image/svg+xml" href="static/favicon/favicon.svg" />
     <link rel="stylesheet" href="static/css/styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MyAstroBoard",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Linux, Docker",
+      "description": "Self-hosted astronomy dashboard with automated SkyTonight observation planning, AstroScore ranking, astrophotography weather analysis, and spaceflight tracking.",
+      "url": "https://github.com/WorldOfGZ/myastroboard",
+      "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "author": { "@type": "Person", "name": "WorldOfGZ" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-bg" aria-hidden="true"></div>
+
+    <!-- ========== HEADER ========== -->
     <header class="site-header">
       <div class="container nav-wrapper">
-        <a href="/" class="brand" aria-label="myAstroBoard home">
+        <a href="/" class="brand" aria-label="MyAstroBoard home">
           <span class="brand-dot"></span>
-          <span>myAstroBoard</span>
+          <span>MyAstroBoard</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          Menu
-        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/features/">Features</a>
-          <a href="/pricing/">Pricing</a>
-          <a href="/docs/">Documentation</a>
-          <a href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/web-myastroboard/features/">Features</a>
+          <a href="/web-myastroboard/pricing/">Pricing</a>
+          <a href="/web-myastroboard/docs/">Docs</a>
+          <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
+
+      <!-- ========== HERO ========== -->
       <section class="hero section container">
-        <p class="eyebrow">Open-source · Self-hosted · Privacy-first</p>
-        <h1>The modern self-hosted astronomy dashboard enthusiasts have been waiting for.</h1>
-        <p class="hero-copy">
-          myAstroBoard brings observatory visibility, ISS tracking, weather, sky events, and modular widgets into one
-          elegant control center you fully own.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">
-            View on GitHub
-          </a>
-          <a class="btn btn-secondary" href="/features/">Explore Features</a>
-          <a class="btn btn-secondary" href="/docs/">Documentation</a>
-        </div>
-        <div class="trust-chips" role="list" aria-label="Core product principles">
-          <span role="listitem">Open Source</span>
-          <span role="listitem">Self-Hosted</span>
-          <span role="listitem">Privacy First</span>
-          <span role="listitem">Local Data</span>
-        </div>
-        <article class="dashboard-preview" aria-label="myAstroBoard dashboard preview">
-          <header>
-            <strong>Observatory Night Dashboard</strong>
-            <span>Live Local Instance</span>
-          </header>
-          <div class="dashboard-grid">
-            <section><h2>Sky Conditions</h2><p>Seeing 0.8 · Transparency High · Moon 12%</p></section>
-            <section><h2>ISS Tracker</h2><p>Next pass in 00:42:13 · Max alt 78°</p></section>
-            <section><h2>Meteor Activity</h2><p>Eta Aquariids peak tonight · Dark window optimal</p></section>
-            <section><h2>Equipment</h2><p>Mount ready · Camera cooled · Dome synchronized</p></section>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow">Open-source · Self-hosted · Docker-ready</p>
+            <h1>The autonomous astronomy dashboard built for astrophotographers.</h1>
+            <p class="hero-copy">
+              MyAstroBoard runs <strong>SkyTonight</strong> — your personal observation-planning engine. It automatically computes the best targets from international star catalogs, ranks them with <strong>AstroScore</strong>, and integrates weather, ISS passes, spaceflight events and more into one elegant self-hosted control center.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ GitHub Repository</a>
+              <a class="btn btn-secondary" href="#quickstart">Quick Start</a>
+              <a class="btn btn-secondary" href="/web-myastroboard/features/">All Features</a>
+            </div>
+            <div class="trust-chips" role="list" aria-label="Core product principles">
+              <span role="listitem">AGPL-3.0 Free Software</span>
+              <span role="listitem">Privacy-First</span>
+              <span role="listitem">Your Data, Your Server</span>
+              <span role="listitem">No Account Required</span>
+            </div>
           </div>
-        </article>
+
+          <div class="app-preview-frame" aria-label="MyAstroBoard dashboard preview">
+            <div class="app-preview-bar">
+              <span class="app-preview-dot"></span>
+              <span class="app-preview-dot"></span>
+              <span class="app-preview-dot"></span>
+              <span class="app-preview-title">MyAstroBoard — SkyTonight Dashboard</span>
+            </div>
+            <img
+              class="app-preview-gif"
+              src="https://raw.githubusercontent.com/WorldOfGZ/myastroboard/main/docs/img/overview.gif"
+              alt="MyAstroBoard dashboard overview animation showing SkyTonight, sky map and observation planning"
+              loading="lazy"
+              width="640"
+              height="400"
+              onerror="this.parentElement.classList.add('no-gif'); this.style.display='none'; document.getElementById('preview-fallback').style.display='block'"
+            />
+            <div id="preview-fallback" class="app-preview-img-missing" style="display:none">
+              <div class="dashboard-grid">
+                <section><h2>☀️ SkyTonight</h2><p>Andromeda Galaxy — AstroScore 0.91 · Alt 62° · Seeing optimal</p></section>
+                <section><h2>🌕 Moon</h2><p>Waning Crescent 14% · Dark window 4h20m from 23:15</p></section>
+                <section><h2>🛸 ISS</h2><p>Next pass in 00:38:44 · Max elevation 73° · Visible 6 min</p></section>
+                <section><h2>🌤 Weather</h2><p>Seeing 2.2″ · Transparency High · Wind 4 km/h NE</p></section>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!-- ========== KEY VALUE PROPS ========== -->
       <section class="section container">
         <div class="section-heading">
-          <p class="eyebrow">Feature Overview</p>
-          <h2>Built for real observatory workflows, not generic dashboards.</h2>
+          <p class="eyebrow">Why MyAstroBoard</p>
+          <h2>Everything a serious astrophotographer needs — in one self-hosted tool.</h2>
+          <p>No subscription. No cloud. No compromises.</p>
         </div>
         <div class="feature-grid">
-          <article><h3>Astronomy Dashboard</h3><p>Mission control for your nightly sessions and observatory stack.</p></article>
-          <article><h3>ISS Tracking</h3><p>Live pass windows with practical visibility context for your location.</p></article>
-          <article><h3>Space Events</h3><p>Curated events, conjunctions, and high-value viewing opportunities.</p></article>
-          <article><h3>Meteor Showers</h3><p>Peak alerts and observing readiness in one glance.</p></article>
-          <article><h3>Astrophotography Tools</h3><p>Session-aware widgets for imaging, capture checks, and run status.</p></article>
-          <article><h3>Weather Integration</h3><p>Cloud cover, humidity, wind, and observatory impact indicators.</p></article>
-          <article><h3>Observatory Monitoring</h3><p>Track mount, dome, and equipment states from any device you control.</p></article>
-          <article><h3>Responsive Widgets</h3><p>Arrange modular blocks to match your own observation habits.</p></article>
+          <article>
+            <span class="feature-icon">🔭</span>
+            <h3>SkyTonight — Automated Planning</h3>
+            <p>Your personal scheduler. Runs automatically twice daily, computing observable targets from Messier, Caldwell, OpenNGC/OpenIC catalogs, comets and planets. For your exact location and constraints.</p>
+          </article>
+          <article>
+            <span class="feature-icon">⭐</span>
+            <h3>AstroScore Ranking</h3>
+            <p>Every target gets a [0–1] score based on visibility, sky quality, brightness and viewing comfort — so you always image the best target available tonight, not just the first on a list.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📅</span>
+            <h3>Plan My Night</h3>
+            <p>Build your personal observation timeline from SkyTonight results. Reorder targets, check altitude-vs-time charts per object, and export to CSV or PDF for field use.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🗃️</span>
+            <h3>Astrodex — Your Catalog</h3>
+            <p>A private astrophotography catalog to track your imaged and target objects. Attach your own images, add notes, and cross-reference with SkyTonight results.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌤</span>
+            <h3>Astro Weather Analysis</h3>
+            <p>Weather forecast powered by Open-Meteo, with astrophotography-specific overlays: seeing forecast, cloud transparency, dew risk alerts, and wind analysis for your site.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🔩</span>
+            <h3>Equipment Profiles & FOV</h3>
+            <p>Manage telescope and camera configurations. The field-of-view calculator cross-references your setup against SkyTonight targets to highlight the best matches.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🛸</span>
+            <h3>ISS & Space Tracking</h3>
+            <p>Real-time ISS position, visible pass predictions for your location, current crew in orbit, upcoming rocket launches, and spacewalk events — all in one place.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🔒</span>
+            <h3>Multi-User with Roles</h3>
+            <p>Admin, user and read-only roles. Shared family or club installation. Each user keeps their own preferences, language, theme and planning data.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section container privacy-panel">
-        <div class="section-heading">
-          <p class="eyebrow">Privacy & Ownership</p>
-          <h2>Your observatory. Your infrastructure. Your data.</h2>
-        </div>
-        <p>
-          myAstroBoard runs on your own server, NAS, mini-PC, or home lab. No account required, no forced cloud, no
-          telemetry by default, no data selling, and no vendor lock-in. You decide what is exposed and what stays private.
-        </p>
-        <ul>
-          <li>Data stays local by default</li>
-          <li>No user tracking cookies on this website</li>
-          <li>No third-party analytics scripts</li>
-          <li>No subscription gatekeeping core features</li>
-        </ul>
-      </section>
-
+      <!-- ========== SKYTONIGHT DEEP DIVE ========== -->
       <section class="section container">
         <div class="section-heading">
-          <p class="eyebrow">Showcase</p>
-          <h2>A premium interface designed to make every observation session clearer.</h2>
+          <p class="eyebrow">SkyTonight Engine</p>
+          <h2>Automated observation planning — no manual catalog work.</h2>
+          <p>SkyTonight is the core of MyAstroBoard. It runs in-process, requires no external container, and delivers ready-to-use results every night.</p>
         </div>
-        <div class="showcase-grid">
-          <article><h3>Desktop Focus</h3><p>Dense, glanceable telemetry with strong contrast for night sessions.</p></article>
-          <article><h3>Mobile Companion</h3><p>Fast responsive view for in-field checks and telescope-side adjustments.</p></article>
-          <article><h3>Smooth interactions</h3><p>Subtle transitions and low-overhead animations with minimal JS payload.</p></article>
+        <div class="feature-grid feature-grid-lg">
+          <article>
+            <span class="feature-icon">🗺</span>
+            <h3>Interactive Sky Map</h3>
+            <p>Polar azimuth/altitude projection with target trajectories. Click any object to see its full profile and altitude-vs-time chart for the night.</p>
+          </article>
+          <article>
+            <span class="feature-icon">📊</span>
+            <h3>Altitude-vs-Time Charts</h3>
+            <p>Per-target interactive Chart.js graphs showing the full night observability window, the astronomical night band, and your altitude constraints.</p>
+          </article>
+          <article>
+            <span class="feature-icon">☄️</span>
+            <h3>Comet Tracking</h3>
+            <p>Fresh comet data from Minor Planet Center (JPL as fallback). Comets are ranked and filtered just like DSOs — no separate lookup needed.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🪐</span>
+            <h3>Planets & Solar Bodies</h3>
+            <p>All solar system bodies computed with Skyfield ephemeris (de421.bsp). Opposition bonuses included in AstroScore for peak planetary imaging windows.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🎯</span>
+            <h3>Your Constraints, Applied</h3>
+            <p>Configure min/max altitude, airmass, object size, moon separation, and observability threshold. SkyTonight filters and scores against your exact setup.</p>
+          </article>
+          <article>
+            <span class="feature-icon">⏰</span>
+            <h3>Smart Schedule</h3>
+            <p>Runs automatically 1 hour after astronomical dawn and 1 hour before astronomical dusk. Intelligent clock detection with 6-hour fallback for reliability.</p>
+          </article>
+        </div>
+
+        <div class="astroscore-card" style="margin-top:2rem" aria-label="AstroScore explanation">
+          <div>
+            <p class="eyebrow">AstroScore</p>
+            <h3>Dimensionless target quality ranking</h3>
+            <p style="margin-top:0.5rem">Weighted combination of four sub-scores: <strong>visibility (40%)</strong>, <strong>sky quality (25%)</strong>, <strong>object brightness (25%)</strong>, and <strong>viewing comfort (10%)</strong>. Bonuses for planetary opposition (+0.20) and Messier objects (+0.05). Final value clamped to [0.0, 1.0].</p>
+          </div>
+          <div style="text-align:center">
+            <div class="astroscore-value">0.91</div>
+            <div class="astroscore-label">M31 Andromeda</div>
+          </div>
         </div>
       </section>
 
+      <!-- ========== SPACE ENTHUSIASTS ========== -->
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Also for Space Enthusiasts</p>
+          <h2>Track everything happening in space — from your backyard.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">🚀</span>
+            <h3>Spaceflight Tracker</h3>
+            <p>Upcoming and past rocket launches with countdown timers and video stream links, powered by Launch Library 2.</p>
+          </article>
+          <article>
+            <span class="feature-icon">👨‍🚀</span>
+            <h3>Astronauts in Space</h3>
+            <p>Current ISS crew and all humans currently in orbit. Mission details and crew biographies in one glance.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌍</span>
+            <h3>ISS Live Position</h3>
+            <p>Real-time ISS ground track, upcoming visible passes for your location with maximum elevation and duration.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌌</span>
+            <h3>Aurora Predictions</h3>
+            <p>Aurora forecast for your latitude with activity index and best viewing windows during the night.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🌘</span>
+            <h3>Solar & Lunar Eclipses</h3>
+            <p>Next eclipses with interactive altitude charts for your location. Never miss a celestial event again.</p>
+          </article>
+          <article>
+            <span class="feature-icon">🗓</span>
+            <h3>Space Events</h3>
+            <p>Upcoming spacewalks, dockings, and other milestones aggregated from spaceflight event feeds.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== SELF-HOSTED / PRIVACY ========== -->
+      <section class="section container">
+        <div class="highlight-panel highlight-panel--success">
+          <p class="eyebrow">Privacy & Ownership</p>
+          <h2>Your observatory. Your server. Your data.</h2>
+          <p style="margin-top:0.8rem">MyAstroBoard runs on your own server, NAS, mini-PC, or home lab. There is no mandatory account, no cloud telemetry, and no vendor lock-in. You control what data is processed and what stays private.</p>
+          <ul style="margin-top:1rem">
+            <li>All astronomical data computed locally with Astropy and Astroplan — no external API dependency for core features</li>
+            <li>User data (config, observations, plans) stored only in your Docker volume</li>
+            <li>Weather data fetched from <a href="https://open-meteo.com" target="_blank" rel="noreferrer noopener" style="color:var(--success)">Open-Meteo</a> (open-source, no key required)</li>
+            <li>No analytics, no tracking cookies, no telemetry by default on the application or this website</li>
+            <li>AGPL-3.0 license: source code always available, forks must remain open</li>
+          </ul>
+          <div class="cta-row" style="margin-top:1.5rem">
+            <a class="btn btn-secondary" href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a class="btn btn-ghost" href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== QUICK START ========== -->
+      <section id="quickstart" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Start</p>
+          <h2>Up and running in under 5 minutes with Docker.</h2>
+          <p>Requires Docker and Docker Compose. Works on any Linux host.</p>
+        </div>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Clone the repository</h3>
+              <div class="code-block"><span class="comment"># Clone from GitHub</span>
+<span class="cmd">git clone https://github.com/WorldOfGZ/myastroboard.git</span>
+<span class="cmd">cd myastroboard</span></div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Start with Docker Compose</h3>
+              <div class="code-block"><span class="comment"># Start in production mode</span>
+<span class="cmd">docker compose up -d</span>
+<span class="comment"># Or pull the pre-built image from Docker Hub</span>
+<span class="cmd">docker compose pull &amp;&amp; docker compose up -d</span></div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Open your browser and configure</h3>
+              <div class="code-block"><span class="comment"># Open http://localhost:5000 in your browser</span>
+<span class="comment"># Default credentials: admin / admin</span>
+<span class="comment"># ⚠  Change the password immediately after first login</span>
+<span class="cmd">http://localhost:5000</span></div>
+              <div class="notice-block" style="margin-top:0.8rem">Set your location in the Configuration tab. SkyTonight will automatically run its first calculation and results will appear within minutes.</div>
+            </div>
+          </div>
+        </div>
+        <div class="cta-row" style="margin-top:2rem">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard/blob/main/docs/1.INSTALLATION.md" target="_blank" rel="noreferrer noopener">Full Installation Guide ↗</a>
+          <a class="btn btn-secondary" href="https://hub.docker.com/r/worldofgz/myastroboard" target="_blank" rel="noreferrer noopener">Docker Hub ↗</a>
+        </div>
+      </section>
+
+      <!-- ========== OPEN SOURCE ========== -->
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Open Source</p>
+          <h2>Community-driven. Transparent. Contribution-friendly.</h2>
+        </div>
+        <div class="highlight-panel highlight-panel--accent">
+          <p>MyAstroBoard is developed entirely in public on GitHub with a clear contribution workflow. The codebase is Python 3.11 + Flask on the backend, and vanilla HTML/CSS/JavaScript on the frontend — no heavy framework dependencies.</p>
+          <p style="margin-top:0.8rem">Licensed under <strong>AGPL-3.0</strong>: all forks and derivatives must remain open source. Source code for all deployed versions is always available in the repository.</p>
+          <div class="tech-list" style="margin-top:1.2rem">
+            <span class="tech-badge">Python 3.11</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Astropy</span>
+            <span class="tech-badge">Astroplan</span>
+            <span class="tech-badge">Skyfield</span>
+            <span class="tech-badge">PyOngc</span>
+            <span class="tech-badge">Chart.js</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Open-Meteo</span>
+          </div>
+        </div>
+        <div class="stats-grid" aria-label="Project stats">
+          <div>
+            <strong>AGPL-3.0</strong>
+            <span>Free Software License</span>
+          </div>
+          <div>
+            <strong>Docker Hub</strong>
+            <span>Pre-built Image Available</span>
+          </div>
+          <div>
+            <strong>EN / FR</strong>
+            <span>Internationalization</span>
+          </div>
+          <div>
+            <strong>REST API</strong>
+            <span>Full API Documentation</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== WHO IS IT FOR ========== -->
       <section class="section container">
         <div class="section-heading">
           <p class="eyebrow">Built For</p>
-          <h2>Astrophotographers, stargazers, observatory owners, and open-source builders.</h2>
+          <h2>Astrophotographers first — and every space enthusiast.</h2>
         </div>
-        <div class="tag-grid">
-          <span>Astrophotographers</span><span>Stargazers</span><span>Astronomy Enthusiasts</span>
-          <span>Observatory Owners</span><span>Space Communities</span><span>DIY Observatory Builders</span>
-        </div>
-      </section>
-
-      <section class="section container open-source-panel">
-        <div class="section-heading">
-          <p class="eyebrow">Open Ecosystem</p>
-          <h2>Community-driven. Transparent. Contribution-friendly.</h2>
-        </div>
-        <p>
-          myAstroBoard is developed in public with a GitHub-first workflow. Documentation is planned as Markdown-first and
-          version-friendly to keep contributions practical for everyone.
-        </p>
-        <div class="stats-grid" aria-label="GitHub stats placeholders">
-          <div><strong>★ —</strong><span>GitHub Stars</span></div>
-          <div><strong>⎇ —</strong><span>Forks</span></div>
-          <div><strong>PR —</strong><span>Open Collaboration</span></div>
+        <div class="tag-grid" role="list">
+          <span role="listitem">Astrophotographers</span>
+          <span role="listitem">Visual Observers</span>
+          <span role="listitem">Astronomy Clubs</span>
+          <span role="listitem">Observatory Owners</span>
+          <span role="listitem">Space Enthusiasts</span>
+          <span role="listitem">Self-Hosting Enthusiasts</span>
+          <span role="listitem">Amateur Astronomers</span>
+          <span role="listitem">Open-Source Contributors</span>
         </div>
       </section>
 
+      <!-- ========== FINAL CTA ========== -->
       <section class="section container final-cta">
-        <h2>Everything unlocked. Because it’s yours.</h2>
-        <p>Star the project, follow development, and start shaping your own observatory platform.</p>
+        <p class="eyebrow">Get Started</p>
+        <h2>Plan your next clear night. Own your data. Start for free.</h2>
+        <p>MyAstroBoard is free forever. No trial. No premium tier. Everything unlocked because it's open source.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">Explore Repository</a>
-          <a class="btn btn-secondary" href="/pricing/">See Pricing Philosophy</a>
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ Star on GitHub</a>
+          <a class="btn btn-secondary" href="/web-myastroboard/features/">Explore All Features</a>
+          <a class="btn btn-ghost" href="/web-myastroboard/docs/">Documentation</a>
         </div>
       </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <strong>myAstroBoard</strong>
-          <p>Open-source self-hosted astronomy dashboard.</p>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <strong>MyAstroBoard</strong>
+            <p>Self-hosted astronomy dashboard with automated SkyTonight observation planning for astrophotographers and space enthusiasts.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="/web-myastroboard/features/">Features</a>
+            <a href="/web-myastroboard/pricing/">Pricing</a>
+            <a href="/web-myastroboard/docs/">Documentation</a>
+          </div>
+          <div class="footer-col">
+            <h4>Project</h4>
+            <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub Repository ↗</a>
+            <a href="https://hub.docker.com/r/worldofgz/myastroboard" target="_blank" rel="noreferrer noopener">Docker Hub ↗</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer noopener">Contributing ↗</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/issues" target="_blank" rel="noreferrer noopener">Report an Issue ↗</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal & Privacy</h4>
+            <a href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License ↗</a>
+            <p class="footer-legal" style="margin-top:0.5rem">This website does not use tracking cookies or analytics. <a href="/web-myastroboard/privacy/">Learn more</a>.</p>
+          </div>
         </div>
-        <div>
-          <a href="/features/">Features</a>
-          <a href="/pricing/">Pricing</a>
-          <a href="/docs/">Documentation</a>
-        </div>
-        <div>
-          <p>GDPR/RGPD-ready approach: no tracking cookies, no telemetry by default.</p>
-          <p id="copyright"></p>
+        <div class="footer-bottom">
+          <span class="js-copyright"></span>
+          <span>Powered by Astropy, Astroplan, Skyfield &amp; Open-Meteo</span>
         </div>
       </div>
     </footer>
+
+    <!-- ========== COOKIE CONSENT BANNER ========== -->
+    <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
+      <div class="container cookie-inner">
+        <p class="cookie-text">
+          This website does not use tracking cookies or analytics scripts. We use <strong>localStorage</strong> to save your cookie preference on your device only. See our <a href="/web-myastroboard/privacy/">Privacy Policy</a> for details.
+        </p>
+        <div class="cookie-actions">
+          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Got it</button>
+        </div>
+      </div>
+    </div>
+
     <script src="static/js/site.js" defer></script>
   </body>
 </html>

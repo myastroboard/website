@@ -1,67 +1,144 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing Philosophy — myAstroBoard</title>
-    <meta
-      name="description"
-      content="Everything unlocked, because it's yours. myAstroBoard pricing philosophy for open-source self-hosted users."
-    />
+    <title>Pricing — MyAstroBoard</title>
+    <meta name="description" content="MyAstroBoard is 100% free and open source under AGPL-3.0. Self-hosted means you own everything. No subscription, no premium tier, no vendor lock-in." />
+    <link rel="canonical" href="https://worldofgz.github.io/web-myastroboard/pricing/" />
     <link rel="icon" type="image/svg+xml" href="../static/favicon/favicon.svg" />
     <link rel="stylesheet" href="../static/css/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-bg" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="container nav-wrapper">
-        <a href="/" class="brand"><span class="brand-dot"></span><span>myAstroBoard</span></a>
+        <a href="/web-myastroboard/" class="brand"><span class="brand-dot"></span><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/features/">Features</a>
-          <a href="/pricing/" aria-current="page">Pricing</a>
-          <a href="/docs/">Documentation</a>
-          <a href="https://github.com/WorldOfGZ/myAstroBoard" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/web-myastroboard/features/">Features</a>
+          <a href="/web-myastroboard/pricing/" aria-current="page">Pricing</a>
+          <a href="/web-myastroboard/docs/">Docs</a>
+          <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content" class="container section">
-      <p class="eyebrow">Pricing Philosophy</p>
-      <h1>Everything unlocked. Because it’s yours.</h1>
-      <p class="hero-copy">
-        myAstroBoard is open source and self-hosted. The “plan” is ownership: your infrastructure, your rules, your data.
-      </p>
-      <section class="pricing-card" aria-label="Included capabilities">
-        <h2>Self-Hosted Plan — Included</h2>
-        <p>Install once. Run where you want. Keep control permanently.</p>
+      <p class="eyebrow">Open-Source Pricing Philosophy</p>
+      <h1>Everything unlocked. Because it's yours.</h1>
+      <p class="hero-copy">MyAstroBoard is free and open-source software under the <strong>AGPL-3.0</strong> license. There is no premium tier, no trial period, and no subscription. Your "plan" is ownership — your infrastructure, your rules, your data.</p>
+
+      <!-- Pricing card -->
+      <section class="pricing-card" aria-label="Included capabilities" style="margin-top:2.5rem">
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem">
+          <h2>Self-Hosted · Free Forever</h2>
+          <span class="badge badge--success">AGPL-3.0 Free Software</span>
+        </div>
+        <p>Install once. Run anywhere. Keep full control permanently.</p>
         <ul>
-          <li><span>Unlimited dashboards</span><strong>Included</strong></li>
-          <li><span>Unlimited users</span><strong>Included</strong></li>
-          <li><span>Your own infrastructure</span><strong>Included</strong></li>
-          <li><span>Full data ownership</span><strong>Included</strong></li>
-          <li><span>No telemetry by default</span><strong>Included</strong></li>
-          <li><span>No subscription</span><strong>Included</strong></li>
-          <li><span>No vendor lock-in</span><strong>Included</strong></li>
-          <li><span>Lifetime access</span><strong>Included</strong></li>
-          <li><span>Community-driven roadmap</span><strong>Included</strong></li>
+          <li><span>SkyTonight automated planning engine</span><strong>✓ Included</strong></li>
+          <li><span>AstroScore ranking for all targets</span><strong>✓ Included</strong></li>
+          <li><span>Plan My Night builder (CSV + PDF export)</span><strong>✓ Included</strong></li>
+          <li><span>Astrodex personal astrophotography catalog</span><strong>✓ Included</strong></li>
+          <li><span>Astrophotography weather analysis</span><strong>✓ Included</strong></li>
+          <li><span>ISS tracking &amp; spaceflight events</span><strong>✓ Included</strong></li>
+          <li><span>Equipment profiles &amp; FOV calculator</span><strong>✓ Included</strong></li>
+          <li><span>Solar / Lunar eclipse charts</span><strong>✓ Included</strong></li>
+          <li><span>Aurora forecast</span><strong>✓ Included</strong></li>
+          <li><span>Multi-user with admin/user/read-only roles</span><strong>✓ Included</strong></li>
+          <li><span>Full REST API access</span><strong>✓ Included</strong></li>
+          <li><span>English + French interface (community translations)</span><strong>✓ Included</strong></li>
+          <li><span>PWA — installable on desktop and mobile</span><strong>✓ Included</strong></li>
+          <li><span>No telemetry or analytics</span><strong>✓ Included</strong></li>
+          <li><span>Your own Docker infrastructure</span><strong>✓ Included</strong></li>
+          <li><span>Full data ownership forever</span><strong>✓ Included</strong></li>
+          <li><span>No vendor lock-in</span><strong>✓ Included</strong></li>
+          <li><span>Lifetime access (self-hosted)</span><strong>✓ Included</strong></li>
+          <li><span>Community-driven roadmap</span><strong>✓ Included</strong></li>
         </ul>
       </section>
-      <section class="privacy-panel">
-        <h2>Transparent by design</h2>
-        <p>
-          You are the administrator of your instance. No hidden data monetization, no mandatory account layer, and no cloud
-          dependency to keep your observatory online.
-        </p>
+
+      <!-- What AGPL-3.0 means -->
+      <section class="highlight-panel highlight-panel--accent" style="margin-top:1.5rem" aria-labelledby="agpl-heading">
+        <h2 id="agpl-heading">What AGPL-3.0 means for you</h2>
+        <p style="margin-top:0.7rem">The <strong>GNU Affero General Public License v3.0</strong> is a free software license. It guarantees you four essential freedoms:</p>
+        <ul style="margin-top:0.7rem">
+          <li><strong>Freedom to use</strong> — Run MyAstroBoard for any purpose, in any environment.</li>
+          <li><strong>Freedom to study</strong> — Read and understand the full source code at any time.</li>
+          <li><strong>Freedom to modify</strong> — Adapt MyAstroBoard to your specific observatory setup.</li>
+          <li><strong>Freedom to share</strong> — Distribute your modified version, as long as it remains AGPL-3.0.</li>
+        </ul>
+        <p style="margin-top:0.8rem">The AGPL-3.0 adds one important requirement compared to GPL: if you run a modified version of MyAstroBoard over a network (e.g., shared with your astronomy club), you must make the source code of your modifications available.</p>
+        <div class="notice-block" style="margin-top:1rem">
+          This ensures that the community always benefits from improvements. It also means no corporation can take MyAstroBoard, add proprietary features, and offer it as a closed service without contributing back.
+        </div>
+        <div class="cta-row" style="margin-top:1.2rem">
+          <a class="btn btn-ghost" href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">Read the full AGPL-3.0 license ↗</a>
+        </div>
       </section>
+
+      <!-- Why free / support -->
+      <section class="highlight-panel highlight-panel--success" style="margin-top:1.5rem" aria-labelledby="support-heading">
+        <h2 id="support-heading">Transparent by design</h2>
+        <p style="margin-top:0.7rem">You are the administrator of your own instance. There is no hidden data monetization, no mandatory account layer, and no cloud dependency required to keep your observatory dashboard online.</p>
+        <ul style="margin-top:0.8rem">
+          <li>All astronomical calculations run locally on your hardware — no external API call for SkyTonight.</li>
+          <li>Weather data fetched from Open-Meteo, which is itself an open-source project with no API key required.</li>
+          <li>User data is stored only in your Docker volume and never sent anywhere.</li>
+        </ul>
+        <p style="margin-top:0.8rem">If you find MyAstroBoard useful, the best way to support the project is to <strong>star the repository on GitHub</strong>, report bugs, contribute translations, or submit feature requests via GitHub Issues.</p>
+        <div class="cta-row" style="margin-top:1.2rem">
+          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ Star on GitHub</a>
+          <a class="btn btn-secondary" href="https://github.com/WorldOfGZ/myastroboard/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer noopener">How to Contribute ↗</a>
+        </div>
+      </section>
+
     </main>
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><strong>myAstroBoard</strong><p>Open-source self-hosted astronomy dashboard.</p></div>
-        <div><a href="/">Home</a><a href="/features/">Features</a><a href="/docs/">Documentation</a></div>
-        <div><p>No account required. No user tracking.</p><p id="copyright"></p></div>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <strong>MyAstroBoard</strong>
+            <p>Free and open-source astronomy dashboard. No subscription required.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="/web-myastroboard/">Home</a>
+            <a href="/web-myastroboard/features/">Features</a>
+            <a href="/web-myastroboard/docs/">Documentation</a>
+          </div>
+          <div class="footer-col">
+            <h4>Project</h4>
+            <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+            <a href="https://hub.docker.com/r/worldofgz/myastroboard" target="_blank" rel="noreferrer noopener">Docker Hub ↗</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/web-myastroboard/privacy/">Privacy Policy</a>
+            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License ↗</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="js-copyright"></span>
+          <span>Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
+        </div>
       </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
+      <div class="container cookie-inner">
+        <p class="cookie-text">This website does not use tracking cookies. We use localStorage to save your preference only. <a href="/web-myastroboard/privacy/">Privacy Policy</a>.</p>
+        <div class="cookie-actions">
+          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Got it</button>
+        </div>
+      </div>
+    </div>
+
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>
