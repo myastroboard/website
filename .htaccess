@@ -1,16 +1,42 @@
-RewriteEngine On
+# =========================================
+# BASIC OPTIONS
+# =========================================
 
-# Canonical redirect to https://myastroboard.org
-# Redirects:
-# - http://myastroboard.org
-# - http://www.myastroboard.org
-# - http://myastroboard.com
-# - http://www.myastroboard.com
-# - https://myastroboard.com
-# - https://www.myastroboard.com
-# - https://www.myastroboard.org
-RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^myastroboard\.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www\.myastroboard\.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www\.myastroboard\.org$ [NC]
-RewriteRule ^ https://myastroboard.org%{REQUEST_URI} [R=301,L,NE]
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # =========================================
+    # CANONICAL DOMAIN
+    # =========================================
+
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^myastroboard\.org$ [NC]
+    RewriteRule ^ https://myastroboard.org%{REQUEST_URI} [R=301,L]
+
+    # =========================================
+    # BLOCK SENSITIVE FILES & FOLDERS
+    # =========================================
+
+    # .git
+    RewriteRule (^|/)\.git - [F,L,NC]
+
+    # .github
+    RewriteRule (^|/)\.github - [F,L,NC]
+
+    # .vscode
+    RewriteRule (^|/)\.vscode - [F,L,NC]
+
+    # Composer
+    RewriteRule (^|/)composer\.(json|lock|phar)$ - [F,L,NC]
+
+    # Gitignore
+    RewriteRule (^|/)\.gitignore$ - [F,L,NC]
+
+    # Prettier
+    RewriteRule (^|/)\.prettierrc$ - [F,L,NC]
+
+    # README
+    RewriteRule (^|/)README\.md$ - [F,L,NC]
+</IfModule>
