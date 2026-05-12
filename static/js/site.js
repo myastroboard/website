@@ -25,7 +25,7 @@ if (navToggle && nav) {
 // --- Dynamic copyright year ---
 const year = new Date().getFullYear()
 document.querySelectorAll('.js-copyright').forEach((el) => {
-  el.textContent = `© ${year} WorldOfGZ — Licensed under AGPL-3.0`
+  el.textContent = `© ${year} Gloup (WorldOfGZ) — Licensed under AGPL-3.0`
 })
 
 // --- Cookie consent banner ---
