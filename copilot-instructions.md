@@ -2,7 +2,7 @@
 
 ## Project scope
 
-This repository hosts the static showcase website for **WorldOfGZ/myAstroBoard**.
+This repository hosts the static showcase website for **myastroboard/myastroboard**.
 The positioning is premium, trustworthy, open-source, self-hosted, and privacy-first.
 
 ## Non-negotiable product messaging

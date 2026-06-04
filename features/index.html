@@ -1,20 +1,21 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Features — MyAstroBoard</title>
+    <title>Features - MyAstroBoard</title>
     <meta name="description" content="Full feature list for MyAstroBoard: SkyTonight automated planning, AstroScore, Plan My Night, Astrodex, astrophotography weather, ISS tracking, spaceflight events, equipment profiles and more." />
-    <meta property="og:title" content="Features — MyAstroBoard" />
+    <meta property="og:title" content="Features - MyAstroBoard" />
     <meta property="og:description" content="Full feature list for MyAstroBoard: SkyTonight automated planning, AstroScore, Plan My Night, Astrodex, astrophotography weather, ISS tracking, spaceflight events, equipment profiles and more." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://myastroboard.org/features/" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Features — MyAstroBoard" />
+    <meta name="twitter:title" content="Features - MyAstroBoard" />
     <meta name="twitter:description" content="Explore every MyAstroBoard feature: SkyTonight, AstroScore, weather intelligence, space tracking, and planning tools." />
     <link rel="canonical" href="https://myastroboard.org/features/" />
     <link rel="icon" type="image/svg+xml" href="../static/favicon/favicon.svg" />
     <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -28,7 +29,7 @@
           <a href="../features/" aria-current="page">Features</a>
           <a href="../pricing/">Pricing</a>
           <a href="../docs/">Docs</a>
-          <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+          <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
         </nav>
       </div>
     </header>
@@ -41,55 +42,55 @@
       <!-- ========== SKYTONIGHT ========== -->
       <div class="feature-cat-section" style="margin-top:3rem" id="skytonight">
         <div class="feature-cat-header">
-          <span class="feature-cat-icon">🔭</span>
+          <span class="feature-cat-icon"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></span>
           <div>
-            <h2>SkyTonight — Automated Observation Planning</h2>
+            <h2>SkyTonight - Automated Observation Planning</h2>
             <p>Your personal sky scheduler, powered by Astropy and Astroplan.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
-            <span class="feature-icon">⚙️</span>
+            <span class="feature-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
             <h3>Fully Automated Engine</h3>
             <p>SkyTonight runs automatically at 1 hour after astronomical dawn and 1 hour before astronomical dusk, every day. No manual trigger needed. A smart clock fallback every 6 hours ensures reliability even with untrusted system clocks.</p>
           </article>
           <article>
-            <span class="feature-icon">📚</span>
+            <span class="feature-icon"><i class="bi bi-collection" aria-hidden="true"></i></span>
             <h3>International Catalogs</h3>
             <p>Targets sourced from <strong>OpenNGC</strong>, <strong>OpenIC</strong> (via PyOngc), <strong>Messier</strong>, <strong>Caldwell</strong>, comets from Minor Planet Center (JPL fallback), and all solar-system bodies via Skyfield de421.bsp ephemeris.</p>
           </article>
           <article>
-            <span class="feature-icon">⭐</span>
-            <h3>AstroScore [0–1]</h3>
+            <span class="feature-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
+            <h3>AstroScore [0-1]</h3>
             <p>Each target is ranked with a dimensionless quality score: Visibility (40%), Sky quality (25%), Object brightness (25%), Viewing comfort (10%). Bonuses for planetary opposition (+0.20) and Messier objects (+0.05).</p>
           </article>
           <article>
-            <span class="feature-icon">🗺</span>
+            <span class="feature-icon"><i class="bi bi-globe-americas" aria-hidden="true"></i></span>
             <h3>Interactive Sky Map</h3>
             <p>Polar azimuth/altitude projection with full target trajectory arcs for the night. Click any target to inspect its details. Color-coded by object type (DSO, planet, comet).</p>
           </article>
           <article>
-            <span class="feature-icon">📈</span>
+            <span class="feature-icon"><i class="bi bi-graph-up" aria-hidden="true"></i></span>
             <h3>Altitude-vs-Time Charts</h3>
             <p>Per-target interactive charts powered by Chart.js. See exact observability windows, astronomical night bands, and your personal altitude/airmass constraints at a glance.</p>
           </article>
           <article>
-            <span class="feature-icon">🎯</span>
+            <span class="feature-icon"><i class="bi bi-sliders2" aria-hidden="true"></i></span>
             <h3>Configurable Constraints</h3>
             <p>Define your limits: minimum/maximum altitude, airmass threshold, object angular size, moon separation angle, and observability fraction. SkyTonight filters and ranks accordingly.</p>
           </article>
           <article>
-            <span class="feature-icon">☄️</span>
+            <span class="feature-icon"><i class="bi bi-brightness-alt-high" aria-hidden="true"></i></span>
             <h3>Real-Time Comets</h3>
             <p>Fresh comet orbital data fetched from MPC. Comets are processed through the same AstroScore pipeline, giving you apples-to-apples comparison with DSOs.</p>
           </article>
           <article>
-            <span class="feature-icon">🪐</span>
+            <span class="feature-icon"><i class="bi bi-globe2" aria-hidden="true"></i></span>
             <h3>Solar System Bodies</h3>
             <p>All planets, the Moon, and other solar-system bodies computed with Skyfield high-precision ephemeris. Visibility windows, elongation, and opposition status all included.</p>
           </article>
           <article>
-            <span class="feature-icon">📋</span>
+            <span class="feature-icon"><i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i></span>
             <h3>Target Reports</h3>
             <p>Formatted nightly reports per target with key observational data. Export or browse in the dedicated Reports sub-tab for session preparation.</p>
           </article>
@@ -99,40 +100,40 @@
       <!-- ========== PLANNING TOOLS ========== -->
       <div class="feature-cat-section" id="planning">
         <div class="feature-cat-header">
-          <span class="feature-cat-icon">📅</span>
+          <span class="feature-cat-icon"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></span>
           <div>
             <h2>Observation Planning Tools</h2>
-            <p>From target selection to session export — plan your entire night in the app.</p>
+            <p>From target selection to session export - plan your entire night in the app.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
-            <span class="feature-icon">🗒</span>
+            <span class="feature-icon"><i class="bi bi-calendar2-check" aria-hidden="true"></i></span>
             <h3>Plan My Night</h3>
             <p>Build a personal observation timeline from SkyTonight results. Add targets, set order, check FOV compatibility, and review altitude windows for your entire session before heading outside.</p>
           </article>
           <article>
-            <span class="feature-icon">📤</span>
+            <span class="feature-icon"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i></span>
             <h3>CSV &amp; PDF Export</h3>
             <p>Export your Plan My Night timeline to CSV for spreadsheet use or PDF for field print. Take your plan to the eyepiece without screen dependency.</p>
           </article>
           <article>
-            <span class="feature-icon">🗃️</span>
-            <h3>Astrodex — Personal Catalog</h3>
+            <span class="feature-icon"><i class="bi bi-journal-richtext" aria-hidden="true"></i></span>
+            <h3>Astrodex - Personal Catalog</h3>
             <p>Your private astrophotography catalog. Track which objects you have imaged, attach your own photos, add session notes, and cross-reference with SkyTonight results for progress tracking.</p>
           </article>
           <article>
-            <span class="feature-icon">🔩</span>
+            <span class="feature-icon"><i class="bi bi-camera" aria-hidden="true"></i></span>
             <h3>Equipment Profiles</h3>
             <p>Create and manage telescope, camera, and mount profiles. The field-of-view calculator uses your gear specs to highlight which SkyTonight targets best match your imaging setup.</p>
           </article>
           <article>
-            <span class="feature-icon">🌅</span>
+            <span class="feature-icon"><i class="bi bi-moon-stars" aria-hidden="true"></i></span>
             <h3>Moon Planner</h3>
             <p>Multi-day moon phase planner showing new moon windows, best astrophotography periods (dark window), and optimal dates for scheduling deep-sky sessions weeks ahead.</p>
           </article>
           <article>
-            <span class="feature-icon">⛰</span>
+            <span class="feature-icon"><i class="bi bi-graph-up" aria-hidden="true"></i></span>
             <h3>Horizon Graph</h3>
             <p>Upload your local horizon profile to filter SkyTonight targets against obstructions from mountains, trees, or buildings. Only viable targets are presented.</p>
           </article>
@@ -142,7 +143,7 @@
       <!-- ========== SKY & WEATHER ========== -->
       <div class="feature-cat-section" id="sky-intelligence">
         <div class="feature-cat-header">
-          <span class="feature-cat-icon">🌤</span>
+          <span class="feature-cat-icon"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></span>
           <div>
             <h2>Sky Intelligence &amp; Weather</h2>
             <p>Astronomy-specific weather analysis and sky condition monitoring.</p>
@@ -150,32 +151,32 @@
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
-            <span class="feature-icon">☁️</span>
+            <span class="feature-icon"><i class="bi bi-cloud-moon" aria-hidden="true"></i></span>
             <h3>Astrophotography Weather</h3>
             <p>Open-Meteo powered weather forecast with astrophotography-specific overlays: cloud cover, transparency, wind speed and direction, humidity, and dew risk alerts for your exact GPS coordinates.</p>
           </article>
           <article>
-            <span class="feature-icon">👁</span>
+            <span class="feature-icon"><i class="bi bi-eye" aria-hidden="true"></i></span>
             <h3>Seeing Forecast</h3>
             <p>Atmospheric seeing predictions showing expected stellar resolution and turbulence levels throughout the night. Plan your most demanding high-resolution sessions on the best nights.</p>
           </article>
           <article>
-            <span class="feature-icon">🌙</span>
+            <span class="feature-icon"><i class="bi bi-moon" aria-hidden="true"></i></span>
             <h3>Moon Phase &amp; Dark Window</h3>
             <p>Current moon phase, illumination percentage, rise/set times, and precise dark-window calculation (astronomical twilight to moonrise) so you know exactly how much dark time you have.</p>
           </article>
           <article>
-            <span class="feature-icon">☀️</span>
+            <span class="feature-icon"><i class="bi bi-sun" aria-hidden="true"></i></span>
             <h3>Sun Phases</h3>
             <p>Civil, nautical, and astronomical twilight times for your location. Accurate sunrise/sunset and golden-hour data for solar imaging and outdoor planning.</p>
           </article>
           <article>
-            <span class="feature-icon">🌑</span>
+            <span class="feature-icon"><i class="bi bi-circle-half" aria-hidden="true"></i></span>
             <h3>Solar &amp; Lunar Eclipses</h3>
             <p>Next upcoming solar and lunar eclipses with interactive altitude-vs-time charts for your specific location. Visual tour of eclipse phases and contact times.</p>
           </article>
           <article>
-            <span class="feature-icon">🌌</span>
+            <span class="feature-icon"><i class="bi bi-rainbow" aria-hidden="true"></i></span>
             <h3>Aurora Forecast</h3>
             <p>Geomagnetic activity forecast and aurora visibility predictions for mid-to-high latitudes. Best viewing windows highlighted relative to your local night.</p>
           </article>
@@ -185,40 +186,40 @@
       <!-- ========== SPACE TRACKING ========== -->
       <div class="feature-cat-section" id="space-tracking">
         <div class="feature-cat-header">
-          <span class="feature-cat-icon">🚀</span>
+          <span class="feature-cat-icon"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></span>
           <div>
             <h2>Space Tracking</h2>
-            <p>Everything happening in space — from your backyard.</p>
+            <p>Everything happening in space - from your backyard.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
-            <span class="feature-icon">🛸</span>
+            <span class="feature-icon"><i class="bi bi-broadcast" aria-hidden="true"></i></span>
             <h3>ISS Live Position</h3>
             <p>Real-time International Space Station ground track. Know exactly where the ISS is at any moment and when it will pass over your location.</p>
           </article>
           <article>
-            <span class="feature-icon">🔭</span>
+            <span class="feature-icon"><i class="bi bi-broadcast-pin" aria-hidden="true"></i></span>
             <h3>ISS Visible Passes</h3>
             <p>Upcoming ISS visible passes for your configured location. Exact pass times, maximum elevation angles, approach/departure directions, and visibility duration.</p>
           </article>
           <article>
-            <span class="feature-icon">🚀</span>
+            <span class="feature-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
             <h3>Rocket Launches</h3>
             <p>Upcoming and past rocket launches with countdown timers, mission details, and video stream links. Powered by Launch Library 2 API.</p>
           </article>
           <article>
-            <span class="feature-icon">👨‍🚀</span>
+            <span class="feature-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
             <h3>Humans in Space</h3>
-            <p>Current ISS crew and all humans currently in orbit. Mission name, launch date, time in space, and crew roles — updated automatically.</p>
+            <p>Current ISS crew and all humans currently in orbit. Mission name, launch date, time in space, and crew roles - updated automatically.</p>
           </article>
           <article>
-            <span class="feature-icon">🗓</span>
+            <span class="feature-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></span>
             <h3>Space Events</h3>
             <p>Upcoming spacewalks (EVA), dockings, undockings, and other spaceflight milestones from aggregated event feeds.</p>
           </article>
           <article>
-            <span class="feature-icon">⚡</span>
+            <span class="feature-icon"><i class="bi bi-calendar2-week" aria-hidden="true"></i></span>
             <h3>Astronomical Events</h3>
             <p>Upcoming planetary events including oppositions, conjunctions, elongations, and other significant sky events for the coming weeks.</p>
           </article>
@@ -228,7 +229,7 @@
       <!-- ========== SYSTEM ========== -->
       <div class="feature-cat-section" id="system">
         <div class="feature-cat-header">
-          <span class="feature-cat-icon">⚙️</span>
+          <span class="feature-cat-icon"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></span>
           <div>
             <h2>System &amp; Platform</h2>
             <p>Enterprise-grade capabilities in a self-hosted, single-container package.</p>
@@ -236,42 +237,42 @@
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
-            <span class="feature-icon">🐳</span>
+            <span class="feature-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
             <h3>Docker-First Deployment</h3>
             <p>Single Docker Compose command deployment. Pre-built images on Docker Hub. Development, debug, and production compose files included. Persistent data via volume mount.</p>
           </article>
           <article>
-            <span class="feature-icon">👥</span>
+            <span class="feature-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
             <h3>Multi-User Authentication</h3>
             <p>Admin, user, and read-only roles. Flask session-based auth with bcrypt-hashed passwords. Each user keeps independent preferences including language, theme, and startup tab.</p>
           </article>
           <article>
-            <span class="feature-icon">🌐</span>
+            <span class="feature-icon"><i class="bi bi-translate" aria-hidden="true"></i></span>
             <h3>Internationalization</h3>
             <p>Full UI in English and French with community translation support. Browser language auto-detection. New languages can be added via a single JSON translation file.</p>
           </article>
           <article>
-            <span class="feature-icon">📡</span>
+            <span class="feature-icon"><i class="bi bi-braces" aria-hidden="true"></i></span>
             <h3>REST API</h3>
             <p>Complete documented REST API for all features. Authentication-protected endpoints. Ideal for scripting, home automation integration, or custom dashboards.</p>
           </article>
           <article>
-            <span class="feature-icon">📱</span>
-            <h3>PWA — Works Offline</h3>
+            <span class="feature-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+            <h3>PWA - Works Offline</h3>
             <p>Progressive Web App with service worker and manifest. Install on desktop or mobile for a native-like experience. Offline fallback page included.</p>
           </article>
           <article>
-            <span class="feature-icon">🎨</span>
+            <span class="feature-icon"><i class="bi bi-palette" aria-hidden="true"></i></span>
             <h3>Themes &amp; Customization</h3>
             <p>Light, dark, auto (system preference), and a dedicated red night-vision mode. Per-user density settings (comfortable / compact). Start tab configurable per user.</p>
           </article>
           <article>
-            <span class="feature-icon">📊</span>
+            <span class="feature-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
             <h3>System Metrics</h3>
-            <p>Built-in metrics dashboard showing cache job status, last execution times, TTLs, scheduler state, and application health — all in the admin panel.</p>
+            <p>Built-in metrics dashboard showing cache job status, last execution times, TTLs, scheduler state, and application health - all in the admin panel.</p>
           </article>
           <article>
-            <span class="feature-icon">🔐</span>
+            <span class="feature-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
             <h3>Security by Design</h3>
             <p>No Docker socket access required. Input validation on all API routes. Role-based access control. Secure session cookies. Regular GitHub Actions security scanning.</p>
           </article>
@@ -284,7 +285,7 @@
         <h2>Everything unlocked. Because it's yours.</h2>
         <p style="margin-top:0.6rem">MyAstroBoard is free and open source under AGPL-3.0. Every feature listed here is available in the standard Docker image with no premium tier or paywall.</p>
         <div class="cta-row" style="justify-content:center;margin-top:1.5rem">
-          <a class="btn btn-primary" href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">⭐ GitHub Repository</a>
+          <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub Repository</a>
           <a class="btn btn-secondary" href="../pricing/">Pricing Philosophy</a>
         </div>
       </div>
@@ -306,13 +307,13 @@
           </div>
           <div class="footer-col">
             <h4>Project</h4>
-            <a href="https://github.com/WorldOfGZ/myastroboard" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
-            <a href="https://hub.docker.com/r/worldofgz/myastroboard" target="_blank" rel="noreferrer noopener">Docker Hub ↗</a>
+            <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+            <a href="https://hub.docker.com/r/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-box-seam" aria-hidden="true"></i> Docker Hub</a>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>
             <a href="../privacy/">Privacy Policy</a>
-            <a href="https://github.com/WorldOfGZ/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 ↗</a>
+            <a href="https://github.com/myastroboard/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-bottom">

@@ -487,6 +487,30 @@ li + li {
   line-height: 1;
 }
 
+.feature-icon i,
+.feature-cat-icon i,
+.doc-card-icon i {
+  color: var(--icon-accent, var(--accent-strong));
+  filter: drop-shadow(0 0 10px rgba(127, 157, 255, 0.25));
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+
+.feature-grid article:hover .feature-icon i,
+.doc-card:hover .doc-card-icon i {
+  filter: drop-shadow(0 0 14px currentColor);
+}
+
+/* Section-level icon accents */
+.section--home-core { --icon-accent: #8fb9ff; }
+.section--home-sky { --icon-accent: #f5c842; }
+.section--home-space { --icon-accent: #79d9ff; }
+
+#skytonight { --icon-accent: #8fb9ff; }
+#planning { --icon-accent: #f5c842; }
+#sky-intelligence { --icon-accent: #74e3b0; }
+#space-tracking { --icon-accent: #79d9ff; }
+#system { --icon-accent: #a9b7d4; }
+
 /* =========================================================
    FEATURE CATEGORY (features page)
    ========================================================= */

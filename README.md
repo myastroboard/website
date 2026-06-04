@@ -1,6 +1,6 @@
 # web-myastroboard
 
-Modern static showcase website for **WorldOfGZ/myAstroBoard**.
+Modern static showcase website for **myastroboard/myastroboard**.
 
 ## Vision
 
