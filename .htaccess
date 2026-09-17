@@ -11,6 +11,9 @@ Options -Indexes
     # CANONICAL DOMAIN
     # =========================================
 
+    # Skip redirect for local development (localhost / 127.0.0.1 / [::1], any port)
+    RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1|\[::1\])(:[0-9]+)?$ [NC]
+
     RewriteCond %{HTTPS} !=on [OR]
     RewriteCond %{HTTP_HOST} !^myastroboard\.org$ [NC]
     RewriteRule ^ https://myastroboard.org%{REQUEST_URI} [R=301,L]

@@ -611,6 +611,13 @@ li + li {
   margin-bottom: 0.3rem;
 }
 
+/* A grid cell defaults to min-width:auto and grows to its longest unbroken line, so the
+   code block inside never gets the chance to scroll; on a phone the whole page widened
+   to the length of the curl command. */
+.step-content {
+  min-width: 0;
+}
+
 .code-block {
   background: rgba(4, 6, 14, 0.9);
   border: 1px solid var(--border);
@@ -1105,5 +1112,154 @@ li + li {
 
   .cookie-actions {
     justify-content: flex-end;
+  }
+}
+
+/* =========================================================
+   SCREENSHOTS
+   A framed app screenshot with a caption, the same treatment
+   as the hero preview frame. `.split` puts one beside a block of
+   text (image right; `.split--flip` swaps sides), `.shot-strip`
+   lays two or three in a row.
+   ========================================================= */
+.shot {
+  margin: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(127, 157, 255, 0.08);
+  overflow: hidden;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shot figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  border-top: 1px solid var(--border);
+  background: rgba(8, 11, 22, 0.8);
+}
+
+.split {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  margin-top: 2rem;
+}
+
+.split--flip {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+}
+
+.split--flip > .split-text {
+  order: 2;
+}
+
+.split + .split {
+  margin-top: 3.5rem;
+}
+
+.split-text h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.split-text .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.split-text ul {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  color: var(--text-soft);
+}
+
+.split-text li {
+  margin-bottom: 0.35rem;
+}
+
+.shot-strip {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Screenshots do not all share an aspect ratio; without this the shorter one is
+     stretched to the row and its caption floats above a dark gap. */
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.shot-strip + .shot-strip {
+  margin-top: 1rem;
+}
+
+/* Frames in one row read as a set only when they are the same height. A strip that
+   mixes screenshots of different proportions sets --shot-ratio to its widest image, so
+   that one is never cropped and the taller ones lose a little off the bottom - the
+   part of a screenshot that is a table tail, never the headline. */
+.shot-strip .shot img {
+  aspect-ratio: var(--shot-ratio, auto);
+  object-fit: cover;
+  object-position: top left;
+}
+
+.shot-strip--plate { --shot-ratio: 1600 / 548; }
+.shot-strip--log { --shot-ratio: 1600 / 570; }
+
+.section-note {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--success);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--success-soft);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.feature-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-jump a {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.feature-jump a:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.section--home-log { --icon-accent: #74e3b0; }
+.section--home-beginner { --icon-accent: #f5c842; }
+#logbook { --icon-accent: #74e3b0; }
+#beginners { --icon-accent: #f5c842; }
+
+@media (max-width: 900px) {
+  .split,
+  .split--flip {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .split--flip > .split-text {
+    order: 0;
+  }
+
+  .split + .split {
+    margin-top: 2.5rem;
   }
 }
