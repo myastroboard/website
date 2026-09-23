@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-title="docs.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,18 +26,28 @@
         <a href="../" class="brand"><img src="../static/favicon/favicon.svg" alt="" aria-hidden="true" width="24" height="24" /><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="../features/">Features</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../docs/" aria-current="page">Docs</a>
+          <a href="../features/" data-i18n="nav.features">Features</a>
+          <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+          <a href="../docs/" aria-current="page" data-i18n="nav.docs">Docs</a>
           <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          <div class="lang-picker">
+            <select id="lang-select" aria-label="Language">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="pt">PT</option>
+              <option value="it">IT</option>
+              <option value="de">DE</option>
+              <option value="es">ES</option>
+            </select>
+          </div>
         </nav>
       </div>
     </header>
 
     <main id="main-content" class="container section">
-      <p class="eyebrow">Documentation</p>
-      <h1>Everything you need to install, configure and contribute.</h1>
-      <p class="hero-copy">All documentation lives in the GitHub repository as versioned Markdown files. Click any card below to open the relevant guide directly on GitHub.</p>
+      <p class="eyebrow" data-i18n="docs.eyebrow">Documentation</p>
+      <h1 data-i18n="docs.h1">Everything you need to install, configure and contribute.</h1>
+      <p class="hero-copy" data-i18n="docs.hero_copy">All documentation lives in the GitHub repository as versioned Markdown files. Click any card below to open the relevant guide directly on GitHub.</p>
 
       <!-- Getting Started -->
       <div class="feature-cat-section" style="margin-top:3rem">
@@ -166,22 +176,22 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <strong>MyAstroBoard</strong>
-            <p>Self-hosted astronomy dashboard. Documentation hosted on GitHub.</p>
+            <p data-i18n="footer.tagline">Self-hosted astronomy dashboard. Documentation hosted on GitHub.</p>
           </div>
           <div class="footer-col">
-            <h4>Navigation</h4>
-            <a href="../">Home</a>
-            <a href="../features/">Features</a>
-            <a href="../pricing/">Pricing</a>
+            <h4 data-i18n="footer.nav_heading">Navigation</h4>
+            <a href="../" data-i18n="footer.home">Home</a>
+            <a href="../features/" data-i18n="nav.features">Features</a>
+            <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
           </div>
           <div class="footer-col">
-            <h4>Project</h4>
+            <h4 data-i18n="footer.project_heading">Project</h4>
             <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
-            <a href="https://github.com/myastroboard/myastroboard/issues" target="_blank" rel="noreferrer noopener">Issues <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://github.com/myastroboard/myastroboard/issues" target="_blank" rel="noreferrer noopener"><span data-i18n="footer.report_issue">Issues</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           </div>
           <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="../privacy/">Privacy Policy</a>
+            <h4 data-i18n="footer.legal_heading">Legal</h4>
+            <a href="../privacy/" data-i18n="nav.privacy">Privacy Policy</a>
             <a href="https://github.com/myastroboard/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -202,6 +212,8 @@
       </div>
     </div>
 
+    <script src="../static/js/translations.js" defer></script>
+    <script src="../static/js/i18n.js" defer></script>
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>
