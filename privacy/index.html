@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-title="privacy.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,17 +27,27 @@
         <a href="../" class="brand"><img src="../static/favicon/favicon.svg" alt="" aria-hidden="true" width="24" height="24" /><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="../features/">Features</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../docs/">Docs</a>
+          <a href="../features/" data-i18n="nav.features">Features</a>
+          <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+          <a href="../docs/" data-i18n="nav.docs_short">Docs</a>
           <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          <div class="lang-picker">
+            <select id="lang-select" aria-label="Language" data-i18n-aria-label="nav.lang_label">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="pt">PT</option>
+              <option value="it">IT</option>
+              <option value="de">DE</option>
+              <option value="es">ES</option>
+            </select>
+          </div>
         </nav>
       </div>
     </header>
 
     <main id="main-content" class="container section">
-      <p class="eyebrow">Legal &amp; Privacy</p>
-      <h1>Privacy Policy</h1>
+      <p class="eyebrow" data-i18n="privacy.eyebrow">Legal &amp; Privacy</p>
+      <h1 data-i18n="privacy.h1">Privacy Policy</h1>
       <p class="hero-copy" style="margin-top:0.6rem">Last updated: May 2026. This policy applies to the <strong>MyAstroBoard marketing website</strong> (this website). It does not apply to the MyAstroBoard self-hosted application when you deploy the app yourself, you are the data controller for your own instance.</p>
 
       <div class="notice-block" style="margin-top:2rem">
@@ -147,34 +157,36 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <strong>MyAstroBoard</strong>
-            <p>Self-hosted, open-source astronomy dashboard. No tracking. No subscription.</p>
+            <p data-i18n="footer.tagline">Self-hosted, open-source astronomy dashboard. No tracking. No subscription.</p>
           </div>
           <div class="footer-col">
-            <h4>Navigation</h4>
-            <a href="../">Home</a>
-            <a href="../features/">Features</a>
-            <a href="../pricing/">Pricing</a>
-            <a href="../docs/">Documentation</a>
+            <h4 data-i18n="footer.nav_heading">Navigation</h4>
+            <a href="../" data-i18n="footer.home">Home</a>
+            <a href="../features/" data-i18n="nav.features">Features</a>
+            <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+            <a href="../docs/" data-i18n="nav.docs">Documentation</a>
           </div>
           <div class="footer-col">
-            <h4>Project</h4>
+            <h4 data-i18n="footer.project_heading">Project</h4>
             <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
             <a href="https://hub.docker.com/r/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-box-seam" aria-hidden="true"></i> Docker Hub</a>
           </div>
           <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="../privacy/" aria-current="page">Privacy Policy</a>
+            <h4 data-i18n="footer.legal_heading">Legal</h4>
+            <a href="../privacy/" aria-current="page" data-i18n="nav.privacy">Privacy Policy</a>
             <a href="https://github.com/myastroboard/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 License <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
             <a href="https://www.cnil.fr" target="_blank" rel="noreferrer noopener">CNIL (France) <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-bottom">
           <span class="js-copyright"></span>
-          <span>Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
+          <span><span data-i18n="footer.licensed_under">Licensed under</span> <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
         </div>
       </div>
     </footer>
 
+    <script src="../static/js/translations.js" defer></script>
+    <script src="../static/js/i18n.js" defer></script>
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>

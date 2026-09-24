@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-title="features.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,27 +26,37 @@
         <a href="../" class="brand"><img src="../static/favicon/favicon.svg" alt="" aria-hidden="true" width="24" height="24" /><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="../features/" aria-current="page">Features</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../docs/">Docs</a>
+          <a href="../features/" aria-current="page" data-i18n="nav.features">Features</a>
+          <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+          <a href="../docs/" data-i18n="nav.docs_short">Docs</a>
           <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          <div class="lang-picker">
+            <select id="lang-select" aria-label="Select language" data-i18n-aria-label="nav.lang_label">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="pt">PT</option>
+              <option value="it">IT</option>
+              <option value="de">DE</option>
+              <option value="es">ES</option>
+            </select>
+          </div>
         </nav>
       </div>
     </header>
 
     <main id="main-content" class="container section">
-      <p class="eyebrow">Complete Feature Reference</p>
-      <h1>Everything you need for serious astrophotography sessions.</h1>
-      <p class="hero-copy">MyAstroBoard combines an autonomous sky-planning engine, a real observing logbook, weather intelligence and space-tracking data into one self-hosted application. Everything below ships in the standard Docker image.</p>
+      <p class="eyebrow" data-i18n="features.eyebrow">Complete Feature Reference</p>
+      <h1 data-i18n="features.h1">Everything you need for serious astrophotography sessions.</h1>
+      <p class="hero-copy" data-i18n="features.hero_copy">MyAstroBoard combines an autonomous sky-planning engine, a real observing logbook, weather intelligence and space-tracking data into one self-hosted application. Everything below ships in the standard Docker image.</p>
 
       <nav class="feature-jump" aria-label="Jump to a category">
-        <a href="#skytonight">SkyTonight</a>
-        <a href="#planning">Planning</a>
-        <a href="#logbook">Logbook</a>
-        <a href="#beginners">Beginners</a>
-        <a href="#sky-intelligence">Sky &amp; Weather</a>
-        <a href="#space-tracking">Space</a>
-        <a href="#system">Platform</a>
+        <a href="#skytonight" data-i18n="features.jump_skytonight">SkyTonight</a>
+        <a href="#planning" data-i18n="features.jump_planning">Planning</a>
+        <a href="#logbook" data-i18n="features.jump_logbook">Logbook</a>
+        <a href="#beginners" data-i18n="features.jump_beginners">Beginners</a>
+        <a href="#sky-intelligence" data-i18n="features.jump_sky">Sky &amp; Weather</a>
+        <a href="#space-tracking" data-i18n="features.jump_space">Space</a>
+        <a href="#system" data-i18n="features.jump_system">Platform</a>
       </nav>
 
       <!-- ========== SKYTONIGHT ========== -->
@@ -54,50 +64,50 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-stars" aria-hidden="true"></i></span>
           <div>
-            <h2>SkyTonight - Automated Observation Planning</h2>
-            <p>Your personal sky scheduler, powered by Astropy, Astroplan and Skyfield.</p>
+            <h2 data-i18n="features.sky_cat_h2">SkyTonight - Automated Observation Planning</h2>
+            <p data-i18n="features.sky_cat_sub">Your personal sky scheduler, powered by Astropy, Astroplan and Skyfield.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
-            <h3>Fully Automated Engine</h3>
-            <p>SkyTonight runs one hour after astronomical dawn and one hour before astronomical dusk, every day, in-process - no external container, no manual trigger. A six-hour fallback cycle keeps it reliable when the system clock cannot be trusted.</p>
+            <h3 data-i18n="features.sky_engine_h3">Fully Automated Engine</h3>
+            <p data-i18n="features.sky_engine_p">SkyTonight runs one hour after astronomical dawn and one hour before astronomical dusk, every day, in-process - no external container, no manual trigger. A six-hour fallback cycle keeps it reliable when the system clock cannot be trusted.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-collection" aria-hidden="true"></i></span>
-            <h3>A Dozen Catalogues</h3>
-            <p><strong>OpenNGC</strong> and <strong>OpenIC</strong> via PyOngc, <strong>Messier</strong>, <strong>Caldwell</strong>, <strong>Herschel 400</strong>, <strong>Pensack 500</strong>, <strong>LBN</strong>, <strong>Arp</strong>, <strong>Sharpless</strong>, <strong>Barnard</strong>, <strong>vdB</strong>, <strong>Abell</strong> planetaries and clusters - plus comets from the Minor Planet Center and every solar-system body from Skyfield ephemeris.</p>
+            <h3 data-i18n="features.sky_cat12_h3">A Dozen Catalogues</h3>
+            <p data-i18n-html="features.sky_cat12_p"><strong>OpenNGC</strong> and <strong>OpenIC</strong> via PyOngc, <strong>Messier</strong>, <strong>Caldwell</strong>, <strong>Herschel 400</strong>, <strong>Pensack 500</strong>, <strong>LBN</strong>, <strong>Arp</strong>, <strong>Sharpless</strong>, <strong>Barnard</strong>, <strong>vdB</strong>, <strong>Abell</strong> planetaries and clusters - plus comets from the Minor Planet Center and every solar-system body from Skyfield ephemeris.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
-            <h3>AstroScore [0-1]</h3>
-            <p>Each target is ranked with a dimensionless quality score: visibility (40%), sky quality (25%), object brightness (25%), viewing comfort (10%). Bonuses for planetary opposition (+0.20) and Messier objects (+0.05).</p>
+            <h3 data-i18n="features.sky_score_h3">AstroScore [0-1]</h3>
+            <p data-i18n="features.sky_score_p">Each target is ranked with a dimensionless quality score: visibility (40%), sky quality (25%), object brightness (25%), viewing comfort (10%). Bonuses for planetary opposition (+0.20) and Messier objects (+0.05).</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-globe-americas" aria-hidden="true"></i></span>
-            <h3>Interactive Sky Map</h3>
-            <p>Polar azimuth/altitude projection with the full trajectory arc of every target for the night. Click any target to inspect it. Colour-coded by object type - DSO, planet, comet.</p>
+            <h3 data-i18n="features.sky_map_h3">Interactive Sky Map</h3>
+            <p data-i18n="features.sky_map_p">Polar azimuth/altitude projection with the full trajectory arc of every target for the night. Click any target to inspect it. Colour-coded by object type - DSO, planet, comet.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-graph-up" aria-hidden="true"></i></span>
-            <h3>Altitude-vs-Time Charts</h3>
-            <p>Per-target interactive charts: the exact observability window, the astronomical night band, your altitude and airmass constraints, and your own horizon profile if you have drawn one.</p>
+            <h3 data-i18n="features.sky_chart_h3">Altitude-vs-Time Charts</h3>
+            <p data-i18n="features.sky_chart_p">Per-target interactive charts: the exact observability window, the astronomical night band, your altitude and airmass constraints, and your own horizon profile if you have drawn one.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-calendar3" aria-hidden="true"></i></span>
-            <h3>Visibility Calendar</h3>
-            <p>When is this object worth your time? Twelve months of dark hours above your altitude limit for any target, from your site - so a season is planned in one look rather than night by night.</p>
+            <h3 data-i18n="features.sky_cal_h3">Visibility Calendar</h3>
+            <p data-i18n="features.sky_cal_p">When is this object worth your time? Twelve months of dark hours above your altitude limit for any target, from your site - so a season is planned in one look rather than night by night.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-funnel" aria-hidden="true"></i></span>
-            <h3>Advanced DSO Filters</h3>
-            <p>Narrow the deep-sky table by angular size, surface brightness, an altitude window in the hours you can actually observe, whether it fits your camera's field of view, and how much integration it needs. Applied server-side, before the results are cut down.</p>
+            <h3 data-i18n="features.sky_filter_h3">Advanced DSO Filters</h3>
+            <p data-i18n="features.sky_filter_p">Narrow the deep-sky table by angular size, surface brightness, an altitude window in the hours you can actually observe, whether it fits your camera's field of view, and how much integration it needs. Applied server-side, before the results are cut down.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-sliders2" aria-hidden="true"></i></span>
-            <h3>Configurable Constraints</h3>
-            <p>Define your limits: minimum and maximum altitude, airmass threshold, object angular size, Moon separation angle, observability fraction. SkyTonight filters and ranks accordingly.</p>
+            <h3 data-i18n="features.sky_constraints_h3">Configurable Constraints</h3>
+            <p data-i18n="features.sky_constraints_p">Define your limits: minimum and maximum altitude, airmass threshold, object angular size, Moon separation angle, observability fraction. SkyTonight filters and ranks accordingly.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-brightness-alt-high" aria-hidden="true"></i></span>
@@ -108,15 +118,15 @@
         <div class="shot-strip">
           <figure class="shot">
             <img src="../static/img/skytonight-sky-map.webp" alt="SkyTonight polar sky map with target trajectories" loading="lazy" width="1600" height="675" />
-            <figcaption>Sky map and ranked targets</figcaption>
+            <figcaption data-i18n="home.caption_skymap">Sky map and ranked targets</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/skytonight-deep-sky.webp" alt="Deep-sky objects table ranked by AstroScore" loading="lazy" width="1600" height="675" />
-            <figcaption>The deep-sky table</figcaption>
+            <figcaption data-i18n="features.caption_deeptable">The deep-sky table</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/skytonight-altitude-chart.webp" alt="Altitude-vs-time chart for one target" loading="lazy" width="1600" height="675" />
-            <figcaption>Altitude over the night</figcaption>
+            <figcaption data-i18n="features.caption_altchart">Altitude over the night</figcaption>
           </figure>
         </div>
       </div>
@@ -126,55 +136,55 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-calendar2-check" aria-hidden="true"></i></span>
           <div>
-            <h2>Observation Planning Tools</h2>
-            <p>From target selection to a printed plan - the whole night, before it happens.</p>
+            <h2 data-i18n="features.planning_cat_h2">Observation Planning Tools</h2>
+            <p data-i18n="features.planning_cat_sub">From target selection to a printed plan - the whole night, before it happens.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-calendar2-check" aria-hidden="true"></i></span>
-            <h3>Plan My Night</h3>
-            <p>Build a timeline from SkyTonight results. Add targets, set the order and durations, check field-of-view fit, and follow along live as the night progresses with a progress bar over your dark window.</p>
+            <h3 data-i18n="features.plan_night_h3">Plan My Night</h3>
+            <p data-i18n="features.plan_night_p">Build a timeline from SkyTonight results. Add targets, set the order and durations, check field-of-view fit, and follow along live as the night progresses with a progress bar over your dark window.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-arrow-left-right" aria-hidden="true"></i></span>
-            <h3>Meridian Flip Estimator</h3>
-            <p>Every timeline entry shows when its target crosses the meridian and how many minutes the flip will cost, so a long exposure is not scheduled straight across it.</p>
+            <h3 data-i18n="features.plan_meridian_h3">Meridian Flip Estimator</h3>
+            <p data-i18n="features.plan_meridian_p">Every timeline entry shows when its target crosses the meridian and how many minutes the flip will cost, so a long exposure is not scheduled straight across it.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i></span>
-            <h3>CSV &amp; PDF Export</h3>
-            <p>Export your timeline to CSV for a spreadsheet or PDF for a field print. Take the plan to the eyepiece without a screen.</p>
+            <h3 data-i18n="features.plan_export_h3">CSV &amp; PDF Export</h3>
+            <p data-i18n="features.plan_export_p">Export your timeline to CSV for a spreadsheet or PDF for a field print. Take the plan to the eyepiece without a screen.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-            <h3>Multi-Location</h3>
-            <p>Up to five observing sites, managed by an admin and attributed per user. One-tap switching, and every site keeps its own forecasts, SkyTonight results and cache - a dark-sky trip is one click away from home.</p>
+            <h3 data-i18n="features.plan_multisite_h3">Multi-Location</h3>
+            <p data-i18n="features.plan_multisite_p">Up to five observing sites, managed by an admin and attributed per user. One-tap switching, and every site keeps its own forecasts, SkyTonight results and cache - a dark-sky trip is one click away from home.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-camera" aria-hidden="true"></i></span>
-            <h3>Equipment Profiles</h3>
-            <p>Telescopes, cameras, mounts and accessories, combined into the setups you actually use. The field-of-view calculator matches each combination against SkyTonight targets. Combinations can be shared, so club gear lives in one place.</p>
+            <h3 data-i18n="features.plan_equip_h3">Equipment Profiles</h3>
+            <p data-i18n="features.plan_equip_p">Telescopes, cameras, mounts and accessories, combined into the setups you actually use. The field-of-view calculator matches each combination against SkyTonight targets. Combinations can be shared, so club gear lives in one place.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-moon-stars" aria-hidden="true"></i></span>
-            <h3>Moon Planner &amp; Phase Calendar</h3>
-            <p>A multi-day Moon planner for new-Moon windows and best imaging periods, and a monthly phase calendar to schedule deep-sky sessions weeks ahead.</p>
+            <h3 data-i18n="features.plan_moon_h3">Moon Planner &amp; Phase Calendar</h3>
+            <p data-i18n="features.plan_moon_p">A multi-day Moon planner for new-Moon windows and best imaging periods, and a monthly phase calendar to schedule deep-sky sessions weeks ahead.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-graph-up" aria-hidden="true"></i></span>
-            <h3>Horizon Profile</h3>
-            <p>Draw your local horizon - trees, buildings, that hill to the south - and SkyTonight filters targets against the real obstructions, not a flat line.</p>
+            <h3 data-i18n="features.plan_horizon_h3">Horizon Profile</h3>
+            <p data-i18n="features.plan_horizon_p">Draw your local horizon - trees, buildings, that hill to the south - and SkyTonight filters targets against the real obstructions, not a flat line.</p>
           </article>
         </div>
         <div class="shot-strip">
           <figure class="shot">
             <img src="../static/img/plan-my-night.webp" alt="Plan My Night timeline" loading="lazy" width="1600" height="675" />
-            <figcaption>Plan My Night</figcaption>
+            <figcaption data-i18n="features.caption_plannight">Plan My Night</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/equipment-combinations.webp" alt="Equipment combinations" loading="lazy" width="1600" height="675" />
-            <figcaption>Equipment combinations</figcaption>
+            <figcaption data-i18n="features.caption_equip">Equipment combinations</figcaption>
           </figure>
         </div>
       </div>
@@ -184,77 +194,77 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-journal-text" aria-hidden="true"></i></span>
           <div>
-            <h2>Your Observing Logbook</h2>
-            <p>What you actually did, what it adds up to, and what is still on the list.</p>
+            <h2 data-i18n="features.logbook_cat_h2">Your Observing Logbook</h2>
+            <p data-i18n="features.logbook_cat_sub">What you actually did, what it adds up to, and what is still on the list.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-journal-text" aria-hidden="true"></i></span>
-            <h3>Observation Log</h3>
-            <p>A session is a trip: a site, an equipment combination, and one or more nights, each with its own times and measured conditions - SQM, seeing, transparency, Moon illumination. One entry per target records frames, sub-exposure, integration, a 0-5 rating and your notes.</p>
+            <h3 data-i18n="features.log_session_h3">Observation Log</h3>
+            <p data-i18n="features.log_session_p">A session is a trip: a site, an equipment combination, and one or more nights, each with its own times and measured conditions - SQM, seeing, transparency, Moon illumination. One entry per target records frames, sub-exposure, integration, a 0-5 rating and your notes.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></span>
-            <h3>Multi-Night Sessions</h3>
-            <p>A three-night dark-sky trip is one session, not three. Each target is attributed to the night it was captured on, and can carry its own equipment when you switched scopes halfway through.</p>
+            <h3 data-i18n="features.log_multi_h3">Multi-Night Sessions</h3>
+            <p data-i18n="features.log_multi_p">A three-night dark-sky trip is one session, not three. Each target is attributed to the night it was captured on, and can carry its own equipment when you switched scopes halfway through.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-compass" aria-hidden="true"></i></span>
-            <h3>Your Sky</h3>
-            <p>The log, read back. Light collected over your whole logbook, this year and this month; hours per month; object types, constellations and equipment breakdowns; and your ratings against the conditions you recorded, with sample counts, never dressed up as a prediction.</p>
+            <h3 data-i18n="features.log_sky_h3">Your Sky</h3>
+            <p data-i18n="features.log_sky_p">The log, read back. Light collected over your whole logbook, this year and this month; hours per month; object types, constellations and equipment breakdowns; and your ratings against the conditions you recorded, with sample counts, never dressed up as a prediction.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-map" aria-hidden="true"></i></span>
-            <h3>The Sky You Have Covered</h3>
-            <p>Every capture placed on a sky chart against the Milky Way and the ecliptic, with the band that never rises from your site shaded out. Each dot grows with the integration behind it, and the top axis reads as the month that part of the sky is at its best.</p>
+            <h3 data-i18n="features.log_covered_h3">The Sky You Have Covered</h3>
+            <p data-i18n="features.log_covered_p">Every capture placed on a sky chart against the Milky Way and the ecliptic, with the band that never rises from your site shaded out. Each dot grows with the integration behind it, and the top axis reads as the month that part of the sky is at its best.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-calendar-range" aria-hidden="true"></i></span>
-            <h3>When the Sky Is Open</h3>
-            <p>Available darkness and moonless dark hours per month, computed from the Sun and the Moon at your site, next to the hours you actually logged. Useful from day one - it does not wait for your log to fill.</p>
+            <h3 data-i18n="features.log_open_h3">When the Sky Is Open</h3>
+            <p data-i18n="features.log_open_p">Available darkness and moonless dark hours per month, computed from the Sun and the Moon at your site, next to the hours you actually logged. Useful from day one - it does not wait for your log to fill.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-bookmark-star" aria-hidden="true"></i></span>
-            <h3>Wishlist</h3>
-            <p>What you still want to capture, with priority and notes, sorted by upcoming visibility. Whether a wish has been fulfilled is recomputed from your log on every read, never stored - so it can never go stale.</p>
+            <h3 data-i18n="features.log_wishlist_h3">Wishlist</h3>
+            <p data-i18n="features.log_wishlist_p">What you still want to capture, with priority and notes, sorted by upcoming visibility. Whether a wish has been fulfilled is recomputed from your log on every read, never stored - so it can never go stale.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-images" aria-hidden="true"></i></span>
-            <h3>Astrodex Gallery &amp; Photo Map</h3>
-            <p>Every object you have imaged, with your own pictures and notes. Browse it as a collection, on a map of where each capture was taken, or through the Catalogue Collection to see how much of Messier or Caldwell you have covered. Private per user, or shared across the household.</p>
+            <h3 data-i18n="features.log_astrodex_h3">Astrodex Gallery &amp; Photo Map</h3>
+            <p data-i18n="features.log_astrodex_p">Every object you have imaged, with your own pictures and notes. Browse it as a collection, on a map of where each capture was taken, or through the Catalogue Collection to see how much of Messier or Caldwell you have covered. Private per user, or shared across the household.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i></span>
-            <h3>Import, Export, Backup</h3>
-            <p>Import tonight's plan straight into a new session. Export any session as a print-friendly PDF. The log, the gallery and the wishlist all travel in the admin backup archive.</p>
+            <h3 data-i18n="features.log_export_h3">Import, Export, Backup</h3>
+            <p data-i18n="features.log_export_p">Import tonight's plan straight into a new session. Export any session as a print-friendly PDF. The log, the gallery and the wishlist all travel in the admin backup archive.</p>
           </article>
         </div>
         <div class="shot-strip shot-strip--log">
           <figure class="shot">
             <img src="../static/img/observation-log.webp" alt="Observation Log listing sessions" loading="lazy" width="1600" height="570" />
-            <figcaption>Observation Log</figcaption>
+            <figcaption data-i18n="features.caption_log">Observation Log</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/observation-log-session.webp" alt="One observation session with its targets" loading="lazy" width="1600" height="675" />
-            <figcaption>A session, target by target</figcaption>
+            <figcaption data-i18n="features.caption_logsession">A session, target by target</figcaption>
           </figure>
         </div>
         <div class="shot-strip shot-strip--plate">
           <figure class="shot">
             <img src="../static/img/your-sky-record.webp" alt="Your Sky headline figures and monthly light collected" loading="lazy" width="1600" height="548" />
-            <figcaption>Your Sky - the record</figcaption>
+            <figcaption data-i18n="features.caption_skyrecord">Your Sky - the record</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/your-sky-chart.webp" alt="Sky chart of every captured object" loading="lazy" width="1600" height="565" />
-            <figcaption>Your Sky - the chart</figcaption>
+            <figcaption data-i18n="features.caption_skychart">Your Sky - the chart</figcaption>
           </figure>
         </div>
         <figure class="shot" style="margin-top:1rem">
           <img src="../static/img/astrodex-gallery.webp" alt="Astrodex gallery of captured objects" loading="lazy" width="1600" height="571" />
-          <figcaption>The Astrodex gallery</figcaption>
+          <figcaption data-i18n="features.caption_astrodex">The Astrodex gallery</figcaption>
         </figure>
-        <p class="section-note">The observation log is permanently private: no shared mode, no admin-wide view, even where the Astrodex gallery is shared.</p>
+        <p class="section-note" data-i18n="features.log_note">The observation log is permanently private: no shared mode, no admin-wide view, even where the Astrodex gallery is shared.</p>
       </div>
 
       <!-- ========== BEGINNERS ========== -->
@@ -262,35 +272,35 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
           <div>
-            <h2>Beginner Experience</h2>
-            <p>Serious tools, without the cliff. Nothing is hidden behind a mode switch.</p>
+            <h2 data-i18n="features.beginners_cat_h2">Beginner Experience</h2>
+            <p data-i18n="features.beginners_cat_sub">Serious tools, without the cliff. Nothing is hidden behind a mode switch.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-magic" aria-hidden="true"></i></span>
-            <h3>Guided Setup Wizard</h3>
-            <p>A fresh install asks for your location and your level, then gets out of the way. SkyTonight runs its first calculation on its own; results appear within minutes.</p>
+            <h3 data-i18n="features.beginner_wizard_h3">Guided Setup Wizard</h3>
+            <p data-i18n="features.beginner_wizard_p">A fresh install asks for your location and your level, then gets out of the way. SkyTonight runs its first calculation on its own; results appear within minutes.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></span>
-            <h3>"Tonight for You"</h3>
-            <p>A shortlist at the top of the deep-sky tab, matched to your skill level and your gear - the handful of targets that will actually work tonight, before the full table.</p>
+            <h3 data-i18n="features.beg_mode_h3">"Tonight for You"</h3>
+            <p data-i18n="features.beg_mode_p">A shortlist at the top of the deep-sky tab, matched to your skill level and your gear - the handful of targets that will actually work tonight, before the full table.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-speedometer" aria-hidden="true"></i></span>
-            <h3>Difficulty Ratings</h3>
-            <p>Every target carries a difficulty rating, so a faint galaxy and a bright open cluster are not presented as the same kind of evening.</p>
+            <h3 data-i18n="features.beginner_diff_h3">Difficulty Ratings</h3>
+            <p data-i18n="features.beginner_diff_p">Every target carries a difficulty rating, so a faint galaxy and a bright open cluster are not presented as the same kind of evening.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-book" aria-hidden="true"></i></span>
-            <h3>Beginner Catalog</h3>
-            <p>A curated set of objects that reward a small telescope and a first camera, with the same visibility, scoring and planning tools as everything else.</p>
+            <h3 data-i18n="features.beg_catalog_h3">Beginner Catalog</h3>
+            <p data-i18n="features.beg_catalog_p">A curated set of objects that reward a small telescope and a first camera, with the same visibility, scoring and planning tools as everything else.</p>
           </article>
         </div>
         <figure class="shot" style="margin-top:1.5rem">
           <img src="../static/img/beginner-catalog.webp" alt="Beginner Catalog" loading="lazy" width="1600" height="567" />
-          <figcaption>The Beginner Catalog</figcaption>
+          <figcaption data-i18n="features.caption_beginner">The Beginner Catalog</figcaption>
         </figure>
       </div>
 
@@ -299,50 +309,50 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-cloud-moon" aria-hidden="true"></i></span>
           <div>
-            <h2>Sky Intelligence &amp; Weather</h2>
-            <p>Astronomy-specific weather analysis and sky condition monitoring.</p>
+            <h2 data-i18n="features.sky_intel_cat_h2">Sky Intelligence &amp; Weather</h2>
+            <p data-i18n="features.sky_intel_cat_sub">Astronomy-specific weather analysis and sky condition monitoring.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-cloud-moon" aria-hidden="true"></i></span>
-            <h3>Astrophotography Weather</h3>
-            <p>Open-Meteo forecasts with imaging-specific overlays: cloud cover, transparency, wind speed and direction, humidity, and dew-risk alerts for your exact coordinates.</p>
+            <h3 data-i18n="features.weather_h3">Astrophotography Weather</h3>
+            <p data-i18n="features.weather_p">Open-Meteo forecasts with imaging-specific overlays: cloud cover, transparency, wind speed and direction, humidity, and dew-risk alerts for your exact coordinates.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-eye" aria-hidden="true"></i></span>
-            <h3>Seeing Forecast</h3>
-            <p>Atmospheric seeing and transparency predictions through the night, so the most demanding high-resolution sessions land on the nights that deserve them.</p>
+            <h3 data-i18n="features.sqm_h3">Seeing Forecast</h3>
+            <p data-i18n="features.sqm_p">Atmospheric seeing and transparency predictions through the night, so the most demanding high-resolution sessions land on the nights that deserve them.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-moon" aria-hidden="true"></i></span>
-            <h3>Moon Phase &amp; Dark Window</h3>
-            <p>Current phase, illumination, rise and set times, and the precise dark window between astronomical twilight and moonrise - exactly how much dark time you have.</p>
+            <h3 data-i18n="features.moon_h3">Moon Phase &amp; Dark Window</h3>
+            <p data-i18n="features.moon_p">Current phase, illumination, rise and set times, and the precise dark window between astronomical twilight and moonrise - exactly how much dark time you have.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-sun" aria-hidden="true"></i></span>
-            <h3>Sun Phases</h3>
-            <p>Civil, nautical and astronomical twilight for your location. Accurate sunrise, sunset and golden-hour data for solar imaging and outdoor planning.</p>
+            <h3 data-i18n="features.skyint_sun_h3">Sun Phases</h3>
+            <p data-i18n="features.skyint_sun_p">Civil, nautical and astronomical twilight for your location. Accurate sunrise, sunset and golden-hour data for solar imaging and outdoor planning.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-circle-half" aria-hidden="true"></i></span>
-            <h3>Solar &amp; Lunar Eclipses</h3>
-            <p>The next eclipses with interactive altitude-vs-time charts for your specific location, phases and contact times included.</p>
+            <h3 data-i18n="features.eclipse_h3">Solar &amp; Lunar Eclipses</h3>
+            <p data-i18n="features.eclipse_p">The next eclipses with interactive altitude-vs-time charts for your specific location, phases and contact times included.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-rainbow" aria-hidden="true"></i></span>
-            <h3>Aurora Forecast</h3>
-            <p>Geomagnetic activity and aurora visibility for mid-to-high latitudes, with the best viewing windows relative to your local night.</p>
+            <h3 data-i18n="features.aurora_h3">Aurora Forecast</h3>
+            <p data-i18n="features.aurora_p">Geomagnetic activity and aurora visibility for mid-to-high latitudes, with the best viewing windows relative to your local night.</p>
           </article>
         </div>
         <div class="shot-strip">
           <figure class="shot">
             <img src="../static/img/weather-analysis.webp" alt="Astrophotography weather analysis" loading="lazy" width="1600" height="675" />
-            <figcaption>Weather, read for imaging</figcaption>
+            <figcaption data-i18n="features.caption_weather_feat">Weather, read for imaging</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/moon.webp" alt="Moon phase and dark window" loading="lazy" width="1600" height="675" />
-            <figcaption>The Moon and your dark window</figcaption>
+            <figcaption data-i18n="features.caption_moon_feat">The Moon and your dark window</figcaption>
           </figure>
         </div>
       </div>
@@ -352,45 +362,45 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
           <div>
-            <h2>Space Tracking</h2>
-            <p>Everything happening in space - from your backyard.</p>
+            <h2 data-i18n="features.space_cat_h2">Space Tracking</h2>
+            <p data-i18n="features.space_cat_sub">Everything happening in space - from your backyard.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-broadcast" aria-hidden="true"></i></span>
-            <h3>ISS Live Position</h3>
-            <p>Real-time International Space Station ground track. Know exactly where it is at any moment and when it passes over your location.</p>
+            <h3 data-i18n="features.iss_h3">ISS Live Position</h3>
+            <p data-i18n="features.iss_p">Real-time International Space Station ground track. Know exactly where it is at any moment and when it passes over your location.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-broadcast-pin" aria-hidden="true"></i></span>
-            <h3>Visible Passes &amp; Transits</h3>
-            <p>Upcoming visible passes with exact times, maximum elevation, approach and departure directions and duration - and the rare solar and lunar transits from your site, for the ISS and the Chinese space station.</p>
+            <h3 data-i18n="features.space_passes_h3">Visible Passes &amp; Transits</h3>
+            <p data-i18n="features.space_passes_p">Upcoming visible passes with exact times, maximum elevation, approach and departure directions and duration - and the rare solar and lunar transits from your site, for the ISS and the Chinese space station.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
-            <h3>Rocket Launches</h3>
-            <p>Upcoming and past launches with countdown timers, mission details and video stream links. Powered by Launch Library 2.</p>
+            <h3 data-i18n="features.space_launches_h3">Rocket Launches</h3>
+            <p data-i18n="features.space_launches_p">Upcoming and past launches with countdown timers, mission details and video stream links. Powered by Launch Library 2.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-            <h3>Humans in Space</h3>
-            <p>Current ISS crew and every human currently in orbit. Mission, launch date, time in space and role - updated automatically.</p>
+            <h3 data-i18n="features.space_crew_h3">Humans in Space</h3>
+            <p data-i18n="features.space_crew_p">Current ISS crew and every human currently in orbit. Mission, launch date, time in space and role - updated automatically.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></span>
-            <h3>Space Events</h3>
-            <p>Upcoming spacewalks, dockings, undockings and other spaceflight milestones from aggregated event feeds.</p>
+            <h3 data-i18n="features.space_events_h3">Space Events</h3>
+            <p data-i18n="features.space_events_p">Upcoming spacewalks, dockings, undockings and other spaceflight milestones from aggregated event feeds.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-calendar2-week" aria-hidden="true"></i></span>
-            <h3>Astronomical Events</h3>
-            <p>Oppositions, conjunctions, elongations, meteor showers and other significant sky events for the coming weeks - with multi-day events shown as active, not just counted down to a peak.</p>
+            <h3 data-i18n="features.space_astro_h3">Astronomical Events</h3>
+            <p data-i18n="features.space_astro_p">Oppositions, conjunctions, elongations, meteor showers and other significant sky events for the coming weeks - with multi-day events shown as active, not just counted down to a peak.</p>
           </article>
         </div>
         <figure class="shot" style="margin-top:1.5rem">
           <img src="../static/img/iss-tracking.webp" alt="ISS live position and passes" loading="lazy" width="1600" height="675" />
-          <figcaption>ISS live tracking</figcaption>
+          <figcaption data-i18n="features.caption_iss">ISS live tracking</figcaption>
         </figure>
       </div>
 
@@ -399,77 +409,77 @@
         <div class="feature-cat-header">
           <span class="feature-cat-icon"><i class="bi bi-hdd-network" aria-hidden="true"></i></span>
           <div>
-            <h2>System &amp; Platform</h2>
-            <p>A single self-hosted container, built to be lived in.</p>
+            <h2 data-i18n="features.system_cat_h2">System &amp; Platform</h2>
+            <p data-i18n="features.system_cat_sub">A single self-hosted container, built to be lived in.</p>
           </div>
         </div>
         <div class="feature-grid feature-grid-lg">
           <article>
             <span class="feature-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
-            <h3>Docker-First Deployment</h3>
-            <p>One Docker Compose command. Pre-built images on Docker Hub, persistent data in a volume mount. Zero-config start: secrets are generated on first run, and anything that needs a value is set from the UI.</p>
+            <h3 data-i18n="features.docker_h3">Docker-First Deployment</h3>
+            <p data-i18n="features.docker_p">One Docker Compose command. Pre-built images on Docker Hub, persistent data in a volume mount. Zero-config start: secrets are generated on first run, and anything that needs a value is set from the UI.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
-            <h3>Multi-User Authentication</h3>
-            <p>Admin, user and read-only roles. Session-based auth with bcrypt-hashed passwords. Each user keeps independent preferences - language, theme, density, start tab, notifications.</p>
+            <h3 data-i18n="features.multiuser_h3">Multi-User Authentication</h3>
+            <p data-i18n="features.multiuser_p">Admin, user and read-only roles. Session-based auth with bcrypt-hashed passwords. Each user keeps independent preferences - language, theme, density, start tab, notifications.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-bell" aria-hidden="true"></i></span>
-            <h3>Browser &amp; Push Notifications</h3>
-            <p>Your plan is about to start, the next target is up, darkness begins, an ISS transit or an eclipse is minutes away, the aurora index crossed your threshold, a meteor shower peaks. Each trigger has its own lead time, per user and per site.</p>
+            <h3 data-i18n="features.sys_notif_h3">Browser &amp; Push Notifications</h3>
+            <p data-i18n="features.sys_notif_p">Your plan is about to start, the next target is up, darkness begins, an ISS transit or an eclipse is minutes away, the aurora index crossed your threshold, a meteor shower peaks. Each trigger has its own lead time, per user and per site.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-plug" aria-hidden="true"></i></span>
-            <h3>Connectors &amp; Observatory</h3>
-            <p>Bring an AllSky camera in - live image, keogram, startrails, timelapse and sensor data on a dedicated Observatory tab. Hand a capture to MyAstroShine and get the processed picture back into your Astrodex.</p>
+            <h3 data-i18n="features.sys_connectors_h3">Connectors &amp; Observatory</h3>
+            <p data-i18n="features.sys_connectors_p">Bring an AllSky camera in - live image, keogram, startrails, timelapse and sensor data on a dedicated Observatory tab. Hand a capture to MyAstroShine and get the processed picture back into your Astrodex.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-translate" aria-hidden="true"></i></span>
-            <h3>Six Languages</h3>
-            <p>English, French, German, Spanish, Italian and Portuguese, with browser auto-detection. A new language is one JSON file.</p>
+            <h3 data-i18n="features.sys_lang_h3">Six Languages</h3>
+            <p data-i18n="features.sys_lang_p">English, French, German, Spanish, Italian and Portuguese, with browser auto-detection. A new language is one JSON file.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-braces" aria-hidden="true"></i></span>
-            <h3>REST API</h3>
-            <p>A documented REST API for every feature, behind authentication. For scripting, home automation, or a dashboard of your own.</p>
+            <h3 data-i18n="features.api_h3">REST API</h3>
+            <p data-i18n="features.api_p">A documented REST API for every feature, behind authentication. For scripting, home automation, or a dashboard of your own.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
-            <h3>PWA - Install It</h3>
-            <p>Progressive Web App with a service worker and manifest. Install on desktop or phone for a native-like experience, with an offline fallback page.</p>
+            <h3 data-i18n="features.pwa_h3">PWA - Install It</h3>
+            <p data-i18n="features.pwa_p">Progressive Web App with a service worker and manifest. Install on desktop or phone for a native-like experience, with an offline fallback page.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-palette" aria-hidden="true"></i></span>
-            <h3>Themes &amp; Night Vision</h3>
-            <p>Light, dark, auto, and a dedicated red night-vision mode that reaches into the charts - no blue or green dot on a red page. Comfortable or compact density, per user.</p>
+            <h3 data-i18n="features.sys_themes_h3">Themes &amp; Night Vision</h3>
+            <p data-i18n="features.sys_themes_p">Light, dark, auto, and a dedicated red night-vision mode that reaches into the charts - no blue or green dot on a red page. Comfortable or compact density, per user.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-archive" aria-hidden="true"></i></span>
-            <h3>Backup &amp; Restore</h3>
-            <p>One archive with your configuration, users, equipment, gallery, observation log and wishlist, downloadable from the admin panel and restorable on any other instance.</p>
+            <h3 data-i18n="features.backup_h3">Backup &amp; Restore</h3>
+            <p data-i18n="features.backup_p">One archive with your configuration, users, equipment, gallery, observation log and wishlist, downloadable from the admin panel and restorable on any other instance.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
-            <h3>System Metrics</h3>
-            <p>Cache job status, last execution times, TTLs, scheduler state and application health - all in the admin panel.</p>
+            <h3 data-i18n="features.sys_metrics_h3">System Metrics</h3>
+            <p data-i18n="features.sys_metrics_p">Cache job status, last execution times, TTLs, scheduler state and application health - all in the admin panel.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
-            <h3>Security by Design</h3>
-            <p>No Docker socket access. Input validation on every API route. Role-based access control, secure session cookies, and regular GitHub Actions security scanning.</p>
+            <h3 data-i18n="features.sys_security_h3">Security by Design</h3>
+            <p data-i18n="features.sys_security_p">No Docker socket access. Input validation on every API route. Role-based access control, secure session cookies, and regular GitHub Actions security scanning.</p>
           </article>
         </div>
       </div>
 
       <!-- ========== CTA ========== -->
       <div class="highlight-panel" style="text-align:center;margin-top:1rem">
-        <p class="eyebrow">All Features, Zero Cost</p>
-        <h2>Everything unlocked. Because it's yours.</h2>
-        <p style="margin-top:0.6rem">MyAstroBoard is free and open source under AGPL-3.0. Every feature listed here is available in the standard Docker image with no premium tier or paywall.</p>
+        <p class="eyebrow" data-i18n="features.cta_eyebrow">All Features, Zero Cost</p>
+        <h2 data-i18n="features.cta_h2">Everything unlocked. Because it's yours.</h2>
+        <p style="margin-top:0.6rem" data-i18n="features.cta_p">MyAstroBoard is free and open source under AGPL-3.0. Every feature listed here is available in the standard Docker image with no premium tier or paywall.</p>
         <div class="cta-row" style="justify-content:center;margin-top:1.5rem">
-          <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub Repository</a>
-          <a class="btn btn-secondary" href="../pricing/">Pricing Philosophy</a>
+          <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="features.cta_github">GitHub Repository</span></a>
+          <a class="btn btn-secondary" href="../pricing/" data-i18n="features.cta_pricing">Pricing Philosophy</a>
         </div>
       </div>
 
@@ -480,42 +490,44 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <strong>MyAstroBoard</strong>
-            <p>Self-hosted astronomy dashboard for astrophotographers and space enthusiasts.</p>
+            <p data-i18n="footer.tagline">Self-hosted astronomy dashboard for astrophotographers and space enthusiasts.</p>
           </div>
           <div class="footer-col">
-            <h4>Navigation</h4>
-            <a href="../">Home</a>
-            <a href="../pricing/">Pricing</a>
-            <a href="../docs/">Documentation</a>
+            <h4 data-i18n="footer.nav_heading">Navigation</h4>
+            <a href="../" data-i18n="footer.home">Home</a>
+            <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+            <a href="../docs/" data-i18n="nav.docs">Documentation</a>
           </div>
           <div class="footer-col">
-            <h4>Project</h4>
-            <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
-            <a href="https://hub.docker.com/r/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-box-seam" aria-hidden="true"></i> Docker Hub</a>
+            <h4 data-i18n="footer.project_heading">Project</h4>
+            <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="footer.github">GitHub</span></a>
+            <a href="https://hub.docker.com/r/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-box-seam" aria-hidden="true"></i> <span data-i18n="footer.docker_hub">Docker Hub</span></a>
           </div>
           <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="../privacy/">Privacy Policy</a>
-            <a href="https://github.com/myastroboard/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">AGPL-3.0 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+            <h4 data-i18n="footer.legal_heading">Legal</h4>
+            <a href="../privacy/" data-i18n="nav.privacy">Privacy Policy</a>
+            <a href="https://github.com/myastroboard/myastroboard/blob/main/LICENSE" target="_blank" rel="noreferrer noopener"><span data-i18n="footer.agpl_license">AGPL-3.0</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-bottom">
           <span class="js-copyright"></span>
-          <span>Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
+          <span><span data-i18n="footer.licensed_under">Licensed under</span> <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noreferrer">AGPL-3.0</a></span>
         </div>
       </div>
     </footer>
 
     <div id="cookie-banner" class="cookie-banner is-hidden" role="region" aria-label="Cookie consent notice">
       <div class="container cookie-inner">
-        <p class="cookie-text">This website does not use tracking cookies. We use localStorage to save your preference only. <a href="../privacy/">Privacy Policy</a>.</p>
+        <p class="cookie-text" data-i18n-html="cookie.text_subpage">This website does not use tracking cookies. We use localStorage to save your preference only. <a href="../privacy/">Privacy Policy</a>.</p>
         <div class="cookie-actions">
-          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button">Decline optional</button>
-          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Got it</button>
+          <button id="cookie-decline" class="cookie-btn cookie-btn--decline" type="button" data-i18n="cookie.decline">Decline optional</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button" data-i18n="cookie.accept">Got it</button>
         </div>
       </div>
     </div>
 
+    <script src="../static/js/translations.js" defer></script>
+    <script src="../static/js/i18n.js" defer></script>
     <script src="../static/js/site.js" defer></script>
   </body>
 </html>
