@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-title="features.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,10 +26,20 @@
         <a href="../" class="brand"><img src="../static/favicon/favicon.svg" alt="" aria-hidden="true" width="24" height="24" /><span>MyAstroBoard</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="../features/" aria-current="page">Features</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../docs/">Docs</a>
+          <a href="../features/" aria-current="page" data-i18n="nav.features">Features</a>
+          <a href="../pricing/" data-i18n="nav.pricing">Pricing</a>
+          <a href="../docs/" data-i18n="nav.docs_short">Docs</a>
           <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          <div class="lang-picker">
+            <select id="lang-select" aria-label="Select language" data-i18n-aria-label="nav.lang_label">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="pt">PT</option>
+              <option value="it">IT</option>
+              <option value="de">DE</option>
+              <option value="es">ES</option>
+            </select>
+          </div>
         </nav>
       </div>
     </header>
@@ -108,7 +118,7 @@
         <div class="shot-strip">
           <figure class="shot">
             <img src="../static/img/skytonight-sky-map.webp" alt="SkyTonight polar sky map with target trajectories" loading="lazy" width="1600" height="675" />
-            <figcaption data-i18n="features.caption_skymap">Sky map and ranked targets</figcaption>
+            <figcaption data-i18n="home.caption_skymap">Sky map and ranked targets</figcaption>
           </figure>
           <figure class="shot">
             <img src="../static/img/skytonight-deep-sky.webp" alt="Deep-sky objects table ranked by AstroScore" loading="lazy" width="1600" height="675" />

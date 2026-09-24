@@ -5,7 +5,7 @@
   var STORAGE_KEY = 'mab_lang';
 
   function detectLang() {
-    var stored = sessionStorage.getItem(STORAGE_KEY);
+    var stored = localStorage.getItem(STORAGE_KEY);
     if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
     var nav = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
     return SUPPORTED.indexOf(nav) !== -1 ? nav : 'en';
@@ -25,7 +25,7 @@
     var titleKey = document.documentElement.getAttribute('data-i18n-title');
     if (titleKey) {
       var titleVal = resolve(t, titleKey);
-      if (titleVal) document.title = titleVal + ' - MyAstroBoard';
+      if (titleVal && titleVal !== 'MyAstroBoard') document.title = titleVal + ' - MyAstroBoard';
     }
 
     // data-i18n → textContent
@@ -44,6 +44,14 @@
       if (hval !== undefined) hels[j].innerHTML = hval;
     }
 
+    // data-i18n-aria-label → aria-label attribute
+    var aels = document.querySelectorAll('[data-i18n-aria-label]');
+    for (var k = 0; k < aels.length; k++) {
+      var akey = aels[k].getAttribute('data-i18n-aria-label');
+      var aval = resolve(t, akey);
+      if (aval !== undefined) aels[k].setAttribute('aria-label', aval);
+    }
+
     // sync picker
     var picker = document.getElementById('lang-select');
     if (picker) picker.value = lang;
@@ -58,7 +66,7 @@
       picker.addEventListener('change', function () {
         var chosen = picker.value;
         if (SUPPORTED.indexOf(chosen) !== -1) {
-          sessionStorage.setItem(STORAGE_KEY, chosen);
+          localStorage.setItem(STORAGE_KEY, chosen);
           applyLang(chosen);
         }
       });

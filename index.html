@@ -48,7 +48,7 @@
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <a href="features/" data-i18n="nav.features">Features</a>
           <a href="pricing/" data-i18n="nav.pricing">Pricing</a>
-          <a href="docs/" data-i18n="nav.docs">Docs</a>
+          <a href="docs/" data-i18n="nav.docs_short">Docs</a>
           <a href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
           <div class="lang-picker">
             <select id="lang-select" aria-label="Select language" data-i18n-aria-label="nav.lang_label">
@@ -68,24 +68,14 @@
 
       <!-- ========== HERO ========== -->
       <section class="hero section container">
+        <p class="eyebrow" data-i18n="home.hero_eyebrow">Open-source - Self-hosted - Docker-ready</p>
+        <h1 data-i18n="home.hero_h1">The autonomous astronomy dashboard built for astrophotographers.</h1>
+
         <div class="hero-layout">
           <div class="hero-content">
-            <p class="eyebrow" data-i18n="home.hero_eyebrow">Open-source - Self-hosted - Docker-ready</p>
-            <h1 data-i18n="home.hero_h1">The autonomous astronomy dashboard built for astrophotographers.</h1>
             <p class="hero-copy" data-i18n-html="home.hero_copy">
               MyAstroBoard runs <strong>SkyTonight</strong> - your personal observation-planning engine. It computes the best targets from a dozen international catalogues for your exact site, ranks them with <strong>AstroScore</strong>, folds in weather, the Moon and the ISS - and then keeps the other half of the story: a real <strong>observing logbook</strong> of what you actually captured, and what it adds up to.
             </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="home.cta_github">GitHub Repository</span></a>
-              <a class="btn btn-secondary" href="#quickstart" data-i18n="home.cta_quickstart">Quick Start</a>
-              <a class="btn btn-secondary" href="features/" data-i18n="home.cta_all_features">All Features</a>
-            </div>
-            <div class="trust-chips" role="list" aria-label="Core product principles">
-              <span role="listitem" data-i18n="home.trust_agpl">AGPL-3.0 Free Software</span>
-              <span role="listitem" data-i18n="home.trust_privacy">Privacy-First</span>
-              <span role="listitem" data-i18n="home.trust_data">Your Data, Your Server</span>
-              <span role="listitem" data-i18n="home.trust_nologin">No Account Required</span>
-            </div>
           </div>
 
           <div class="app-preview-frame" aria-label="MyAstroBoard dashboard preview">
@@ -113,6 +103,18 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="home.cta_github">GitHub Repository</span></a>
+          <a class="btn btn-secondary" href="#quickstart" data-i18n="home.cta_quickstart">Quick Start</a>
+          <a class="btn btn-secondary" href="features/" data-i18n="home.cta_hero_features">All Features</a>
+        </div>
+        <div class="trust-chips" role="list" aria-label="Core product principles">
+          <span role="listitem" data-i18n="home.trust_agpl">AGPL-3.0 Free Software</span>
+          <span role="listitem" data-i18n="home.trust_privacy">Privacy-First</span>
+          <span role="listitem" data-i18n="home.trust_data">Your Data, Your Server</span>
+          <span role="listitem" data-i18n="home.trust_nologin">No Account Required</span>
         </div>
       </section>
 
@@ -215,7 +217,7 @@
         <div class="split split--flip">
           <figure class="shot">
             <img src="static/img/your-sky-chart.webp" alt="Sky chart placing every captured object against the Milky Way and the ecliptic" loading="lazy" width="1600" height="565" />
-            <figcaption data-i18n="home.caption_skymap">The sky you have covered - Milky Way, ecliptic, and the band that never rises from your site</figcaption>
+            <figcaption data-i18n="home.caption_yourskychart">The sky you have covered - Milky Way, ecliptic, and the band that never rises from your site</figcaption>
           </figure>
           <div class="split-text">
             <h3 data-i18n="home.log_yoursky_h3">Your Sky</h3>
@@ -276,8 +278,8 @@
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-calendar3" aria-hidden="true"></i></span>
-            <h3 data-i18n="home.sky_cal_h3">Visibility Calendar</h3>
-            <p data-i18n="home.sky_cal_p">When is this object worth your time? Twelve months of dark-hours-above-your-limit for any target, so a season is planned in one look rather than night by night.</p>
+            <h3 data-i18n="features.sky_cal_h3">Visibility Calendar</h3>
+            <p data-i18n="features.sky_cal_p">When is this object worth your time? Twelve months of dark-hours-above-your-limit for any target, so a season is planned in one look rather than night by night.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-funnel" aria-hidden="true"></i></span>
@@ -291,8 +293,8 @@
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-sliders2" aria-hidden="true"></i></span>
-            <h3 data-i18n="home.sky_constraints_h3">Your Constraints, Applied</h3>
-            <p data-i18n="home.sky_constraints_p">Minimum and maximum altitude, airmass, object size, Moon separation, observability threshold. SkyTonight filters and scores against your exact setup.</p>
+            <h3 data-i18n="features.sky_constraints_h3">Your Constraints, Applied</h3>
+            <p data-i18n="features.sky_constraints_p">Minimum and maximum altitude, airmass, object size, Moon separation, observability threshold. SkyTonight filters and scores against your exact setup.</p>
           </article>
           <article>
             <span class="feature-icon"><i class="bi bi-clock-history" aria-hidden="true"></i></span>
@@ -303,7 +305,7 @@
 
         <div class="astroscore-card" style="margin-top:2rem" aria-label="AstroScore explanation">
           <div>
-            <p class="eyebrow" data-i18n="home.sky_eyebrow">AstroScore</p>
+            <p class="eyebrow" data-i18n="home.astroscore_eyebrow">AstroScore</p>
             <h3 data-i18n="home.sky_score_h3">Dimensionless target quality ranking</h3>
             <p style="margin-top:0.5rem" data-i18n-html="home.sky_score_p">Weighted combination of four sub-scores: <strong>visibility (40%)</strong>, <strong>sky quality (25%)</strong>, <strong>object brightness (25%)</strong>, and <strong>viewing comfort (10%)</strong>. Bonuses for planetary opposition (+0.20) and Messier objects (+0.05). Final value clamped to [0.0, 1.0].</p>
           </div>
