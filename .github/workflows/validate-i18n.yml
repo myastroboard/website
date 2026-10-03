@@ -1,0 +1,30 @@
+name: Validate translations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "static/js/translations.js"
+      - "scripts/validate_i18n.py"
+      - ".github/workflows/validate-i18n.yml"
+  pull_request:
+    paths:
+      - "static/js/translations.js"
+      - "scripts/validate_i18n.py"
+      - ".github/workflows/validate-i18n.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-i18n:
+    name: Translation parity and ASCII punctuation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+
+      - run: python scripts/validate_i18n.py
