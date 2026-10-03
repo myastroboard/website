@@ -14,14 +14,14 @@ TRANSLATIONS = Path(__file__).resolve().parent.parent / "static" / "js" / "trans
 REFERENCE = "en"
 PLACEHOLDER = re.compile(r"\{(\w+)\}")
 FORBIDDEN = {
-    "‘": "left single quote",
-    "’": "curly apostrophe",
-    "“": "left double quote",
-    "”": "right double quote",
-    "–": "en dash",
-    "—": "em dash",
-    "…": "ellipsis character",
-    " ": "non-breaking space",
+    "\u2018": "left single quote",
+    "\u2019": "curly apostrophe",
+    "\u201c": "left double quote",
+    "\u201d": "right double quote",
+    "\u2013": "en dash",
+    "\u2014": "em dash",
+    "\u2026": "ellipsis character",
+    "\u00a0": "non-breaking space",
 }
 
 
