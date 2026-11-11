@@ -24,6 +24,7 @@
       "licensed_under": "Licensed under",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Live Demo",
       "agpl_license": "AGPL-3.0 License"
     },
     "cookie": {
@@ -174,6 +175,7 @@
       "caption_skyrecord": "Your Sky: cumulative sky chart",
       "cta_quickstart": "Quick Start Guide",
       "cta_hero_features": "All Features",
+      "cta_demo": "Try the Live Demo",
       "feat_astrodex_h3": "Astrodex Gallery",
       "feat_astrodex_p": "Every object you have imaged, with your own photos and notes. Browse as a collection or map your captures on the sky.",
       "feat_connectors_h3": "Connectors & Observatory",
@@ -353,6 +355,7 @@
       "cta_p": "Everything above ships in the standard Docker image. No add-ons, no tiers, no paid upgrade.",
       "cta_github": "GitHub Repository",
       "cta_pricing": "See Pricing",
+      "cta_demo": "Try the Live Demo",
       "caption_astrodex": "The Astrodex gallery",
       "caption_altchart": "Altitude over the night",
       "caption_deeptable": "The deep-sky table",
@@ -463,6 +466,7 @@
       "licensed_under": "Sous licence",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Démo en ligne",
       "agpl_license": "Licence AGPL-3.0"
     },
     "cookie": {
@@ -613,6 +617,7 @@
       "caption_skyrecord": "Votre Ciel : carte cumulative",
       "cta_quickstart": "Guide de démarrage rapide",
       "cta_hero_features": "Toutes les fonctionnalités",
+      "cta_demo": "Essayer la démo en ligne",
       "feat_astrodex_h3": "Galerie Astrodex",
       "feat_astrodex_p": "Chaque objet que vous avez imagé, avec vos photos et notes. Parcourez-les en collection ou cartographiez vos captures.",
       "feat_connectors_h3": "Connecteurs & Observatoire",
@@ -792,6 +797,7 @@
       "cta_p": "Tout ce qui précède est inclus dans l'image Docker standard. Pas d'extensions, pas de niveaux, pas de mise à niveau payante.",
       "cta_github": "Dépôt GitHub",
       "cta_pricing": "Voir les tarifs",
+      "cta_demo": "Essayer la démo en ligne",
       "caption_astrodex": "La galerie Astrodex",
       "caption_altchart": "Altitude sur la nuit",
       "caption_deeptable": "Le tableau du ciel profond",
@@ -902,6 +908,7 @@
       "licensed_under": "Licenciado sob",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Demo online",
       "agpl_license": "Licença AGPL-3.0"
     },
     "cookie": {
@@ -1052,6 +1059,7 @@
       "caption_skyrecord": "Seu Céu: mapa do céu cumulativo",
       "cta_quickstart": "Guia de início rápido",
       "cta_hero_features": "Todas as funcionalidades",
+      "cta_demo": "Experimentar a demo online",
       "feat_astrodex_h3": "Galeria Astrodex",
       "feat_astrodex_p": "Cada objeto que fotografou, com as suas fotos e notas. Navegue pela coleção ou mapeie as suas capturas no céu.",
       "feat_connectors_h3": "Conectores e Observatório",
@@ -1231,6 +1239,7 @@
       "cta_p": "Tudo acima está incluído na imagem Docker padrão. Sem complementos, sem níveis, sem atualização paga.",
       "cta_github": "Repositório GitHub",
       "cta_pricing": "Ver preços",
+      "cta_demo": "Experimentar a demo online",
       "caption_astrodex": "A galeria Astrodex",
       "caption_altchart": "Altitude ao longo da noite",
       "caption_deeptable": "A tabela do céu profundo",
@@ -1341,6 +1350,7 @@
       "licensed_under": "Con licenza",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Demo online",
       "agpl_license": "Licenza AGPL-3.0"
     },
     "cookie": {
@@ -1491,6 +1501,7 @@
       "caption_skyrecord": "Il Tuo Cielo: mappa cumulativa",
       "cta_quickstart": "Guida rapida",
       "cta_hero_features": "Tutte le funzionalità",
+      "cta_demo": "Prova la demo online",
       "feat_astrodex_h3": "Galleria Astrodex",
       "feat_astrodex_p": "Ogni oggetto che hai fotografato, con le tue foto e note. Sfoglia come collezione o mappa le tue riprese nel cielo.",
       "feat_connectors_h3": "Connettori e Osservatorio",
@@ -1670,6 +1681,7 @@
       "cta_p": "Tutto quanto sopra è incluso nell'immagine Docker standard. Nessun componente aggiuntivo, nessun livello, nessun aggiornamento a pagamento.",
       "cta_github": "Repository GitHub",
       "cta_pricing": "Vedi prezzi",
+      "cta_demo": "Prova la demo online",
       "caption_astrodex": "La galleria Astrodex",
       "caption_altchart": "Altitudine durante la notte",
       "caption_deeptable": "La tabella del cielo profondo",
@@ -1780,6 +1792,7 @@
       "licensed_under": "Lizenziert unter",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Live-Demo",
       "agpl_license": "AGPL-3.0-Lizenz"
     },
     "cookie": {
@@ -1930,6 +1943,7 @@
       "caption_skyrecord": "Your Sky: kumulativer Himmelsatlas",
       "cta_quickstart": "Schnellstart-Anleitung",
       "cta_hero_features": "Alle Funktionen",
+      "cta_demo": "Live-Demo ausprobieren",
       "feat_astrodex_h3": "Astrodex-Galerie",
       "feat_astrodex_p": "Jedes Objekt, das du aufgenommen hast, mit deinen Fotos und Notizen. Als Sammlung durchsuchen oder Aufnahmen auf dem Himmel kartieren.",
       "feat_connectors_h3": "Anschlüsse & Observatorium",
@@ -2109,6 +2123,7 @@
       "cta_p": "Alles oben Genannte ist im Standard-Docker-Image enthalten. Keine Add-ons, keine Stufen, kein kostenpflichtiges Upgrade.",
       "cta_github": "GitHub-Repository",
       "cta_pricing": "Preise ansehen",
+      "cta_demo": "Live-Demo ausprobieren",
       "caption_astrodex": "Die Astrodex-Galerie",
       "caption_altchart": "Höhe über die Nacht",
       "caption_deeptable": "Die Tiefhimmeltabelle",
@@ -2219,6 +2234,7 @@
       "licensed_under": "Licenciado bajo",
       "github": "GitHub",
       "docker_hub": "Docker Hub",
+      "demo": "Demo en línea",
       "agpl_license": "Licencia AGPL-3.0"
     },
     "cookie": {
@@ -2369,6 +2385,7 @@
       "caption_skyrecord": "Tu Cielo: mapa acumulativo",
       "cta_quickstart": "Guía de inicio rápido",
       "cta_hero_features": "Todas las funciones",
+      "cta_demo": "Probar la demo en línea",
       "feat_astrodex_h3": "Galería Astrodex",
       "feat_astrodex_p": "Cada objeto que has fotografiado, con tus fotos y notas. Navega como colección o mapea tus capturas en el cielo.",
       "feat_connectors_h3": "Conectores y Observatorio",
@@ -2548,6 +2565,7 @@
       "cta_p": "Todo lo anterior se incluye en la imagen Docker estándar. Sin complementos, sin niveles, sin actualización de pago.",
       "cta_github": "Repositorio de GitHub",
       "cta_pricing": "Ver precios",
+      "cta_demo": "Probar la demo en línea",
       "caption_astrodex": "La galería Astrodex",
       "caption_altchart": "Altitud durante la noche",
       "caption_deeptable": "La tabla del cielo profundo",
