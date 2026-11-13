@@ -47,7 +47,10 @@
     <main id="main-content" class="container section">
       <p class="eyebrow" data-i18n="docs.eyebrow">Documentation</p>
       <h1 data-i18n="docs.h1">Everything you need to install, configure and contribute.</h1>
-      <p class="hero-copy" data-i18n="docs.hero_copy">All documentation lives in the GitHub repository as versioned Markdown files. Click any card below to open the relevant guide directly on GitHub.</p>
+      <p class="hero-copy" data-i18n="docs.hero_copy">The documentation is published at docs.myastroboard.org: searchable, organised by task, and rebuilt from the project's repository at every change. Pick a guide below, or open the full site.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://docs.myastroboard.org/" target="_blank" rel="noreferrer noopener"><i class="bi bi-book" aria-hidden="true"></i> <span data-i18n="docs.open_site">Open the documentation</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
 
       <!-- Getting Started -->
       <div class="feature-cat-section" style="margin-top:3rem">
@@ -59,22 +62,22 @@
           </div>
         </div>
         <div class="doc-grid">
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/1.INSTALLATION.md" target="_blank" rel="noreferrer noopener" aria-label="Installation guide on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/1.INSTALLATION.html" target="_blank" rel="noreferrer noopener" aria-label="Installation guide">
             <span class="doc-card-icon"><i class="bi bi-download" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.install_h3">Installation Guide</h3>
             <p data-i18n="docs.install_p">Step-by-step Docker installation on Linux, including directory structure, volume setup, and first-run checklist.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/2.QUICKSTART.md" target="_blank" rel="noreferrer noopener" aria-label="Quick start guide on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/2.QUICKSTART.html" target="_blank" rel="noreferrer noopener" aria-label="Quick start guide">
             <span class="doc-card-icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.quickstart_h3">Quick Start</h3>
             <p data-i18n="docs.quickstart_p">Minimal steps to get your first SkyTonight calculation running. Configure your location and observe results within minutes.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/3.UPDATE.md" target="_blank" rel="noreferrer noopener" aria-label="Update guide on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/3.UPDATE.html" target="_blank" rel="noreferrer noopener" aria-label="Update guide">
             <span class="doc-card-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.update_h3">Update Guide</h3>
             <p data-i18n="docs.update_p">How to pull the latest Docker image and apply updates without losing your configuration or observation data.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/6.REVERSE_PROXY.md" target="_blank" rel="noreferrer noopener" aria-label="Reverse proxy guide on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/6.REVERSE_PROXY.html" target="_blank" rel="noreferrer noopener" aria-label="Reverse proxy guide">
             <span class="doc-card-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.proxy_h3">Reverse Proxy &amp; HTTPS</h3>
             <p data-i18n="docs.proxy_p">Configure Nginx or Traefik as a reverse proxy with HTTPS termination. Recommended for any internet-exposed instance.</p>
@@ -92,32 +95,32 @@
           </div>
         </div>
         <div class="doc-grid">
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/SKYTONIGHT.md" target="_blank" rel="noreferrer noopener" aria-label="SkyTonight architecture documentation on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/SKYTONIGHT.html" target="_blank" rel="noreferrer noopener" aria-label="SkyTonight architecture documentation">
             <span class="doc-card-icon"><i class="bi bi-stars" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.skytonight_arch_h3">SkyTonight Architecture</h3>
             <p data-i18n="docs.skytonight_arch_p">Full documentation of the SkyTonight engine: catalog pipeline, AstroScore formula, scheduler behavior, and data model.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/PLAN_MY_NIGHT.md" target="_blank" rel="noreferrer noopener" aria-label="Plan My Night documentation on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/PLAN_MY_NIGHT.html" target="_blank" rel="noreferrer noopener" aria-label="Plan My Night documentation">
             <span class="doc-card-icon"><i class="bi bi-calendar2-check" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.planmynight_h3">Plan My Night</h3>
             <p data-i18n="docs.planmynight_p">How to build, manage, and export your observation timeline. API endpoints, data structure, and usage guide.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/API_ENDPOINTS.md" target="_blank" rel="noreferrer noopener" aria-label="API endpoints reference on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/API_ENDPOINTS.html" target="_blank" rel="noreferrer noopener" aria-label="API endpoints reference">
             <span class="doc-card-icon"><i class="bi bi-braces" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.api_h3">API Endpoints Reference</h3>
             <p data-i18n="docs.api_p">Complete inventory of all REST API endpoints, authentication requirements, request/response formats, and examples.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/CACHE_SYSTEM.md" target="_blank" rel="noreferrer noopener" aria-label="Cache system documentation on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/CACHE_SYSTEM.html" target="_blank" rel="noreferrer noopener" aria-label="Cache system documentation">
             <span class="doc-card-icon"><i class="bi bi-database" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.cache_h3">Cache System</h3>
             <p data-i18n="docs.cache_p">Architecture of the selective-refresh background cache, per-job TTLs, execution metrics, and how to monitor cache health.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/VISUAL_TOUR.md" target="_blank" rel="noreferrer noopener" aria-label="Visual tour on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/VISUAL_TOUR.html" target="_blank" rel="noreferrer noopener" aria-label="Visual tour">
             <span class="doc-card-icon"><i class="bi bi-images" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.visualtour_h3">Visual Tour</h3>
             <p data-i18n="docs.visualtour_p">Annotated screenshots of every tab and feature. The best starting point to understand what MyAstroBoard looks like in practice.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/7.TRANSLATIONS.md" target="_blank" rel="noreferrer noopener" aria-label="Translation guide on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/7.TRANSLATIONS.html" target="_blank" rel="noreferrer noopener" aria-label="Translation guide">
             <span class="doc-card-icon"><i class="bi bi-translate" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.translations_h3">Translation Guide</h3>
             <p data-i18n="docs.translations_p">How to add a new language or improve existing translations. All you need is a JSON file following the established key structure.</p>
@@ -135,17 +138,17 @@
           </div>
         </div>
         <div class="doc-grid">
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer noopener" aria-label="Contributing guidelines on GitHub">
+          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer noopener" aria-label="Contributing guidelines">
             <span class="doc-card-icon"><i class="bi bi-git" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.contrib_guide_h3">Contribution Guidelines</h3>
             <p data-i18n="docs.contrib_guide_p">Coding standards, branch workflow, commit conventions, and how to submit a pull request.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/docs/4.RELEASE.md" target="_blank" rel="noreferrer noopener" aria-label="Release process documentation on GitHub">
+          <a class="doc-card" href="https://docs.myastroboard.org/4.RELEASE.html" target="_blank" rel="noreferrer noopener" aria-label="Release process documentation">
             <span class="doc-card-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.release_h3">Release Process</h3>
             <p data-i18n="docs.release_p">How versioning works, how releases are tagged and published, and how Docker images are built via GitHub Actions CI/CD.</p>
           </a>
-          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/ROADMAP.md" target="_blank" rel="noreferrer noopener" aria-label="Roadmap on GitHub">
+          <a class="doc-card" href="https://github.com/myastroboard/myastroboard/blob/main/ROADMAP.md" target="_blank" rel="noreferrer noopener" aria-label="Roadmap">
             <span class="doc-card-icon"><i class="bi bi-map" aria-hidden="true"></i></span>
             <h3 data-i18n="docs.roadmap_h3">Roadmap</h3>
             <p data-i18n="docs.roadmap_p">Planned features and improvements. Open to community input via GitHub Issues and Discussions.</p>
@@ -164,7 +167,7 @@
         <h2 data-i18n="docs.cta_h2">Ready to deploy your own instance?</h2>
         <p style="margin-top:0.6rem" data-i18n="docs.cta_sub">The Installation Guide has everything you need to go from zero to a running SkyTonight calculation in under 10 minutes.</p>
         <div class="cta-row" style="justify-content:center;margin-top:1.5rem">
-          <a class="btn btn-primary" href="https://github.com/myastroboard/myastroboard/blob/main/docs/1.INSTALLATION.md" target="_blank" rel="noreferrer noopener"><span data-i18n="docs.install_h3">Installation Guide</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          <a class="btn btn-primary" href="https://docs.myastroboard.org/1.INSTALLATION.html" target="_blank" rel="noreferrer noopener"><span data-i18n="docs.install_h3">Installation Guide</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
           <a class="btn btn-secondary" href="https://github.com/myastroboard/myastroboard" target="_blank" rel="noreferrer noopener"><i class="bi bi-github" aria-hidden="true"></i> <span data-i18n="docs.cta_repo">GitHub Repository</span></a>
         </div>
       </div>
@@ -176,7 +179,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <strong>MyAstroBoard</strong>
-            <p data-i18n="footer.tagline">Self-hosted astronomy dashboard. Documentation hosted on GitHub.</p>
+            <p data-i18n="footer.tagline">Self-hosted astronomy dashboard with automated SkyTonight observation planning for astrophotographers and space enthusiasts.</p>
           </div>
           <div class="footer-col">
             <h4 data-i18n="footer.nav_heading">Navigation</h4>
@@ -198,7 +201,7 @@
         </div>
         <div class="footer-bottom">
           <span class="js-copyright"></span>
-          <span>Documentation available on <a href="https://github.com/myastroboard/myastroboard/tree/main/docs" target="_blank" rel="noreferrer">GitHub</a></span>
+          <span><a href="https://docs.myastroboard.org/" target="_blank" rel="noreferrer">docs.myastroboard.org</a></span>
         </div>
       </div>
     </footer>
